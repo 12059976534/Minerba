@@ -47,7 +47,7 @@
     <!-- =============== Start of Header 1 Navigation =============== -->
     <header class="header1">
         <nav class="navbar navbar-default navbar-static-top fluid_header centered">
-            <div class="container">
+            <div class="" style="margin-left: 40px; margin-right: 40px;">
                 
                 <!-- Logo -->
                 <div class="col-md-2 col-sm-6 col-xs-8 nopadding">
@@ -97,7 +97,7 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Prospect<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="find-candidate-1.html">Batu Bara</a></li>
+                                    <li><a href="/prospek">Batu Bara</a></li>
                                     <li><a href="find-candidate-2.html">find a candidate 2</a></li>
                                     <li><a href="post-job.html">post a job</a></li>
                                 </ul>
@@ -107,7 +107,7 @@
                              <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Regulation<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="find-candidate-1.html">Batu Bara</a></li>
+                                    <li><a href="/regulasi">Batu Bara</a></li>
                                     <li><a href="find-candidate-2.html">find a candidate 2</a></li>
                                     <li><a href="post-job.html">post a job</a></li>
                                 </ul>
@@ -117,7 +117,19 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Commodity<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="find-candidate-1.html">COAL BATUBARA</a></li>
+                                    <li><a href="/comodity">COAL BATUBARA</a></li>
+                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
+                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
+                                </ul>
+                            </li>
+                            <!-- End of Mega Menu Item -->
+
+                            <!-- Simple Menu Item -->
+                           <!-- Mega Menu Item -->
+                           <li class="dropdown simple-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Kostraktor<i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/contruktor">COAL BATUBARA</a></li>
                                     <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
                                     <li><a href="post-job.html">NICKEL NIKEL</a></li>
                                 </ul>
@@ -126,98 +138,21 @@
 
                             <!-- Simple Menu Item -->
                             <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Const<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">headers<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="header1.html">header 1 - default</a></li>
-                                            <li><a href="header2.html">header 2 - logo top</a></li>
-                                            <li><a href="header3.html">header 3 - top bar</a></li>
-                                            <li><a href="header4.html">header 4 - sticky</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">footers<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="footer1.html">default</a></li>
-                                            <li><a href="footer2.html">light</a></li>
-                                            <li><a href="footer3.html">dark</a></li>
-                                            <li><a href="footer4.html">simple</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">page headers<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="page-header1.html">default</a></li>
-                                            <li><a href="page-header2.html">light</a></li>
-                                            <li><a href="page-header3.html">dark</a></li>
-                                            <li><a href="page-header4.html">parallax</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="buttons.html">buttons</a></li>
-                                    <li><a href="pricing-tables.html">pricing tables</a></li>
-                                    <li><a href="typography.html">typography</a></li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Konsultan<i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/contruktor">COAL BATUBARA</a></li>
+                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
+                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
                                 </ul>
                             </li>
 
                             <!-- Simple Menu Item -->
                             <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Carrier<i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Karir<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">blog right sidebar<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="blog-right-sidebar-v1.html">version 1</a></li>
-                                            <li><a href="blog-right-sidebar-v2.html">version 2</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">blog left sidebar<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="blog-left-sidebar-v1.html">version 1</a></li>
-                                            <li><a href="blog-left-sidebar-v2.html">version 2</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">blog fullwidth<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="blog-fullwidth-v1.html">version 1</a></li>
-                                            <li><a href="blog-fullwidth-v2.html">version 2</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">masonry<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="blog-masonry-4col.html">4 columns</a></li>
-                                            <li><a href="blog-masonry-3col.html">3 columns</a></li>
-                                            <li><a href="blog-masonry-2col.html">2 columns</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">single post<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="blog-post-right-sidebar.html">post - right sidebar</a></li>
-                                            <li><a href="blog-post-left-sidebar.html">post - left sidebar</a></li>
-                                            <li><a href="blog-post.html">post - fullwidth</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="/contruktor">COAL BATUBARA</a></li>
+                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
+                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
                                 </ul>
                             </li>
 
@@ -225,29 +160,9 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Tender<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">shop<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="shop-right-sidebar.html">shop - right sidebar</a></li>
-                                            <li><a href="shop-left-sidebar.html">shop - left sidebar</a></li>
-                                            <li><a href="shop-fullwidth.html">shop - fullwidth</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Dropdown Submenu -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#">single product<i class="fa fa-angle-right"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="shop-product-right-sidebar.html">product - right sidebar</a></li>
-                                            <li><a href="shop-product-left-sidebar.html">product - left sidebar</a></li>
-                                            <li><a href="shop-product.html">product - fullwidth</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="cart.html">cart</a></li>
-                                    <li><a href="checkout.html">checkout</a></li>
+                                    <li><a href="/contruktor">JOB</a></li>
+                                    <li><a href="find-candidate-2.html">DATABASE</a></li>
+                                    <li><a href="post-job.html">PART TIME</a></li>
                                 </ul>
                             </li>
 
