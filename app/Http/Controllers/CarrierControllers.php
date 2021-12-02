@@ -13,7 +13,7 @@ class CarrierControllers extends Controller
      */
     public function index()
     {
-        //
+        return view('web.page.karir.index');
     }
 
     /**

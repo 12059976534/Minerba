@@ -13,7 +13,7 @@ class NewsControllers extends Controller
      */
     public function index()
     {
-        //
+        return view('web.page.news.index');
     }
 
     /**

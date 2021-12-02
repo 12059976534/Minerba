@@ -13,7 +13,7 @@ class TenderCotrollers extends Controller
      */
     public function index()
     {
-        //
+        return view('web.page.tender.index');
     }
 
     /**

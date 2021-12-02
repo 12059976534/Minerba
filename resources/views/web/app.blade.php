@@ -22,7 +22,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700,800|Varela+Round" rel="stylesheet">
-
+    
     <!-- CSS links -->
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/font-awesome.min.css')}}">
@@ -30,6 +30,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/swiper.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('web/css/animate.css')}}">
+
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -86,72 +89,44 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="search-jobs-1.html">search jobs 1</a></li>
-                                    <li><a href="search-jobs-2.html">search jobs 2</a></li>
-                                    <li><a href="search-jobs-3.html">search jobs 3</a></li>
-                                    <li><a href="search-jobs-4.html">search jobs 4</a></li>
-                                    <li><a href="submit-resume.html">submit resume</a></li>
+                                    <li><a href="/news">Mining Investment</a></li>
                                 </ul>
                             </li>
 
                             <!-- Simple Menu Item -->
                             <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mining Prospect<i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Prospect<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="find-candidate-1.html">find a candidate 1</a></li>
+                                    <li><a href="find-candidate-1.html">Batu Bara</a></li>
+                                    <li><a href="find-candidate-2.html">find a candidate 2</a></li>
+                                    <li><a href="post-job.html">post a job</a></li>
+                                </ul>
+                            </li>
+
+                             <!-- Simple Menu Item -->
+                             <li class="dropdown simple-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Regulation<i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="find-candidate-1.html">Batu Bara</a></li>
                                     <li><a href="find-candidate-2.html">find a candidate 2</a></li>
                                     <li><a href="post-job.html">post a job</a></li>
                                 </ul>
                             </li>
 
                             <!-- Mega Menu Item -->
-                            <li class="dropdown mega-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mining Comodity<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown simple-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Commodity<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <!-- Start of Mega Menu Inner -->
-                                        <div class="mega-menu-inner">
-                                            <div class="row">
-                                                <ul class="col-md-4">
-                                                    <li class="menu-title">pages 1</li>
-                                                    <li><a href="about-us.html">about us</a></li>
-                                                    <li><a href="contact-1.html">contact us 1</a></li>
-                                                    <li><a href="contact-2.html">contact us 2</a></li>
-                                                    <li><a href="companies.html">companies</a></li>
-                                                    <li><a href="company-page-1.html">company page 1</a></li>
-                                                    <li><a href="company-page-2.html">company page 2</a></li>
-                                                </ul>
-
-                                                <ul class="col-md-4">
-                                                    <li class="menu-title">pages 2</li>
-                                                    <li><a href="candidate-profile-1.html">candidate profile 1</a></li>
-                                                    <li><a href="candidate-profile-2.html">candidate profile 2</a></li>
-                                                    <li><a href="candidate-profile-3.html">candidate profile 3</a></li>
-                                                    <li><a href="faq.html">faq</a></li>
-                                                    <li><a href="job-page.html">job page</a></li>
-                                                    <li><a href="privacy-policy.html">privacy policy</a></li>
-                                                </ul>
-
-                                                <ul class="col-md-4">
-                                                    <li class="menu-title">pages 3</li>
-                                                    <li><a href="404.html">404</a></li>
-                                                    <li><a href="404-2.html">404 ver. 2</a></li>
-                                                    <li><a href="coming-soon.html">coming soon</a></li>
-                                                    <li><a href="login.html">login</a></li>
-                                                    <li><a href="register.html">register</a></li>
-                                                    <li><a href="lost-password.html">lost password</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- End of Mega Menu Inner -->
-                                    </li>
+                                    <li><a href="find-candidate-1.html">COAL BATUBARA</a></li>
+                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
+                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
                                 </ul>
                             </li>
                             <!-- End of Mega Menu Item -->
 
                             <!-- Simple Menu Item -->
                             <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mining Const<i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Const<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <!-- Dropdown Submenu -->
                                     <li class="dropdown-submenu">
@@ -292,15 +267,8 @@
     </header>
     <!-- =============== End of Header 1 Navigation =============== -->
 
-
-
-
     @yield('content')
    
-
-
-
-
 
     <!-- =============== Start of Footer 1 =============== -->
     <footer class="footer1">
@@ -609,10 +577,6 @@
     </div>
     <!-- cd-user-modal -->
     <!-- ===== End of Login Pop Up div ===== -->
-
-
-
-
 
     <!-- ===== All Javascript at the bottom of the page for faster page loading ===== -->
     <script src="{{ asset('web/js/jquery-3.1.1.min.js') }}"></script>

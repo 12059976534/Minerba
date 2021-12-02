@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MiningConstruktorControllers extends Controller
+class CarrierControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class MiningConstruktorControllers extends Controller
      */
     public function index()
     {
-        return view('web.page.mining const.index');
+        return view('web.page.prospek.index');
     }
 
     /**

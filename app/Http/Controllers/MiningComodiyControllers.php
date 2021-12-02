@@ -13,7 +13,7 @@ class MiningComodiyControllers extends Controller
      */
     public function index()
     {
-        //
+        return view('web.page.mining_commodity.index');
     }
 
     /**
