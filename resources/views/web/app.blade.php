@@ -51,7 +51,7 @@
                 
                 <!-- Logo -->
                 <div class="col-md-2 col-sm-6 col-xs-8 nopadding">
-                    <a class="navbar-brand nomargin" href="index.html"><img src="{{ asset('web/images/logo.svg')}}" alt="logo"></a>
+                    <a class="navbar-brand nomargin" href="index.html"><img src="{{ asset('assets/images/web.png')}}" alt="logo"></a>
                     <!-- INSERT YOUR LOGO HERE -->
                 </div>
 
@@ -75,14 +75,8 @@
                                 <h4>main menu</h4></li>
 
                             <!-- Simple Menu Item -->
-                            <li class="dropdown simple-menu active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">home<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="index.html">home 1</a></li>
-                                    <li><a href="index-02.html">home 2 - slider</a></li>
-                                    <li><a href="index-03.html">home 3</a></li>
-                                    <li><a href="index-04.html">boxed version</a></li>
-                                </ul>
+                            <li class="dropdown simple-menu ">
+                                <a href="{{ route('home-web') }}" >home</a>
                             </li>
 
                             <!-- Simple Menu Item -->
@@ -342,7 +336,7 @@
             <div class="container">
 
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <span>Copyright &copy; <a href="#">cariera</a>. All Rights Reserved</span>
+                    <span>Copyright &copy; <a href="#">eMINERBA</a>. All Rights Reserved</span>
                 </div>
 
                 <div class="col-md-6 col-sm-6 col-xs-12">

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('web.page.home.index');
-});
+})->name('home-web');
 
 Auth::routes();
 

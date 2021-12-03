@@ -30,14 +30,14 @@
                         <div class="card">
                             <div class="card-body p-4">
                                 <div class="">
-                                    {{-- <div class="text-center">
+                                    <div class="text-center">
                                         <a href="#" class="">
-                                            <img src="https://media.istockphoto.com/vectors/vector-design-of-mining-truck-heavy-machinery-vector-id1054339912?k=20&m=1054339912&s=170667a&w=0&h=9rbaer-APezCk88mOcz0XsWbfMnTESKTANxMNze8p68=" alt="" width="24%" class="auth-logo logo-dark mx-auto">
-                                            <img src="https://media.istockphoto.com/vectors/vector-design-of-mining-truck-heavy-machinery-vector-id1054339912?k=20&m=1054339912&s=170667a&w=0&h=9rbaer-APezCk88mOcz0XsWbfMnTESKTANxMNze8p68=" alt="" width="24%" class="auth-logo logo-light mx-auto">
+                                            <img src="{{ asset('assets/images/web.png')}}" alt="" width="50%" class="auth-logo logo-dark mx-auto">
+                                            <img src="{{ asset('assets/images/web.png')}}" alt="" width="50%" class="auth-logo logo-light mx-auto">
                                         </a>
-                                    </div> --}}
+                                    </div>
                                     <!-- end row -->
-                                    <h4 class="font-size-18 text-muted mt-2 text-center">E - Minerba</h4>
+                                    {{-- <h4 class="font-size-18 text-muted mt-2 text-center">E - Minerba</h4> --}}
                                     <p class="mb-5 text-center">Sign in to continue to E-Minerba.</p>
                                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                                         @csrf
