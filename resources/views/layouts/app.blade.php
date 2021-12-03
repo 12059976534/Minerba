@@ -14,11 +14,11 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         @yield('css')
         <!-- Bootstrap Css -->
-        <link href="{{ asset('assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/bootstrap.min.css')}}"  rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
         <link href="{{ asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="{{ asset('assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/app.min.css')}}"  rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -37,19 +37,19 @@
                         <div class="navbar-brand-box text-center">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/log.png" alt="logo-sm-dark" height="22">
+                                    <img src="{{ asset('assets/images/log.png')}}" alt="logo-sm-dark" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo1.png" alt="logo-dark" height="30">
+                                    <img src="{{ asset('assets/images/logo1.png')}}" alt="logo-dark" height="30">
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/em.png" alt="logo-sm-light" height="22">
+                                    <img src="{{ asset('assets/images/em.png')}}" alt="logo-sm-light" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/eminerba.png" alt="logo-light" height="30">
+                                    <img src="{{ asset('assets/images/eminerba.png')}}" alt="logo-light" height="30">
                                 </span>
                             </a>
                         </div>
@@ -304,7 +304,7 @@
 
                 <div class="p-4">
                     <div class="mb-2">
-                        <img src="assets/images/layouts/layout-1.png" class="img-thumbnail" alt="layout-1">
+                        <img src="{{ asset('assets/images/layouts/layout-1.png')}}" class="img-thumbnail" alt="layout-1">
                     </div>
 
                     <div class="form-check form-switch mb-3">
@@ -313,7 +313,7 @@
                     </div>
     
                     <div class="mb-2">
-                        <img src="assets/images/layouts/layout-2.png" class="img-thumbnail" alt="layout-2">
+                        <img src="{{ asset('assets/images/layouts/layout-2.png')}}" class="img-thumbnail" alt="layout-2">
                     </div>
                     <div class="form-check form-switch mb-3">
                         <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css">
@@ -321,7 +321,7 @@
                     </div>
     
                     <div class="mb-2">
-                        <img src="assets/images/layouts/layout-3.png" class="img-thumbnail" alt="layout-3">
+                        <img src="{{ asset('assets/images/layouts/layout-3.png')}}" class="img-thumbnail" alt="layout-3">
                     </div>
                     <div class="form-check form-switch mb-5">
                         <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css">

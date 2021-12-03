@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/news', [App\Http\Controllers\NewsControllers::class, 'index'])->name('news');
+
+Route::get('/news/komo', [App\Http\Controllers\NewsControllers::class, 'index'])->name('news');
 Route::get('/comodity', [App\Http\Controllers\MiningComodiyControllers::class, 'index'])->name('comodity');
 Route::get('/contruktor', [App\Http\Controllers\MiningConstruktorControllers::class, 'index'])->name('contruktor');
 Route::get('/karir', [App\Http\Controllers\CarrierControllers::class, 'index'])->name('karir');
@@ -28,3 +28,7 @@ Route::get('/tender', [App\Http\Controllers\TenderCotrollers::class, 'index'])->
 Route::get('/prospek', [App\Http\Controllers\ProspekController::class, 'index'])->name('prospek'); 
 Route::get('/regulasi', [App\Http\Controllers\RegulationsController::class, 'index'])->name('regulasi');
   
+
+
+
+Route::get('/home/index', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
