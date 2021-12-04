@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PermissionControllers;
+use App\Http\Controllers\RoleControllers;
+use App\Http\Controllers\UsersControllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +34,9 @@ Route::get('/regulasi', [App\Http\Controllers\RegulationsController::class, 'ind
   
 
 
-
-Route::get('/home/index', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::resource('roles', RoleControllers::class);
+    Route::resource('users', UsersControllers::class);
+    Route::resource('permission', PermissionControllers::class);
+});

@@ -37,10 +37,10 @@
                         <div class="navbar-brand-box text-center">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('assets/images/log.png')}}" alt="logo-sm-dark" height="22">
+                                    <img src="{{ asset('assets/images/em.png')}}" alt="logo-sm-dark" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/logo1.png')}}" alt="logo-dark" height="30">
+                                    <img src="{{ asset('assets/images/eminerba.png')}}" alt="logo-dark" height="30">
                                 </span>
                             </a>
 
@@ -49,7 +49,7 @@
                                     <img src="{{ asset('assets/images/em.png')}}" alt="logo-sm-light" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/eminerba.png')}}" alt="logo-light" height="30">
+                                    <img src="{{ asset('assets/images/eminerba.png')}}" alt="logo-light" height="25">
                                 </span>
                             </a>
                         </div>
@@ -59,46 +59,15 @@
                         </button>
 
                         <!-- App Search-->
-                        <form class="app-search d-none d-lg-block">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="ri-search-line"></span>
-                            </div>
-                        </form>
+                    
                     </div>
 
                     <div class="d-flex">
-
-                        <div class="dropdown d-inline-block d-lg-none ms-2">
-                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="ri-search-line"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                                aria-labelledby="page-header-search-dropdown">
-                    
-                                <form class="p-3">
-                                    <div class="mb-3 m-0">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search ...">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="submit"><i class="ri-search-line"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                      
-
                         <div class="dropdown d-none d-lg-inline-block ms-1">
                             <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
                                 <i class="ri-fullscreen-line"></i>
                             </button>
                         </div>
-
-                      
                         <div class="dropdown d-inline-block user-dropdown">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -121,140 +90,13 @@
                             </div>
                         </div>
                         
-                        <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                                <i class="mdi mdi-cog"></i>
-                            </button>
-                        </div>
-
+                        
                     </div>
                 </div>
             </header>
 
             <!-- ========== Left Sidebar Start ========== -->
-            <div class="vertical-menu">
-
-                <div data-simplebar class="h-100">
-
-                    <!--- Sidemenu -->
-                    <div id="sidebar-menu">
-                        <!-- Left Menu Start -->
-                        <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title">Menu</li>
-
-                            <li>
-                                <a href="{{ route('home')}}" class="waves-effect">
-                                    <i class="mdi mdi-home-variant-outline"></i>
-                                    <span>Dashboard</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="calendar.html" class=" waves-effect">
-                                    <i class="mdi mdi-calendar-outline"></i>
-                                    <span>News</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-email-outline"></i>
-                                    <span>Mining</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-inbox.html">Inbox</a></li>
-                                    <li><a href="email-read.html">Read Email</a></li>
-                                    <li><a href="email-compose.html">Email Compose</a></li>
-                                </ul>
-                            </li>
-
-                           
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-gradient"></i>
-                                    <span>Carrier</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="layouts-light-sidebar.html">Light Sidebar</a></li>
-                                    <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
-                                    <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed Layout</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-page-layout-header"></i>
-                                    <span>Tender</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="layouts-horizontal.html">Default</a></li>
-                                    <li><a href="layouts-hori-topbar-dark.html">Topbar Dark</a></li>
-                                    <li><a href="layouts-hori-boxed-width.html">Boxed width</a></li>
-                                </ul>
-                            </li>
-
-                          
-
-                           
-
-                            <li class="menu-title">Components</li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-briefcase-variant-outline"></i>
-                                    <span>Contact</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="ui-alerts.html">Alerts</a></li>
-                                    <li><a href="ui-badge.html">Badge</a></li>
-                                    <li><a href="ui-buttons.html">Buttons</a></li>
-                                    <li><a href="ui-cards.html">Cards</a></li>
-                                    <li><a href="ui-carousel.html">Carousel</a></li>
-                                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                    <li><a href="ui-grid.html">Grid</a></li>
-                                    <li><a href="ui-images.html">Images</a></li>
-                                    <li><a href="ui-lightbox.html">Lightbox</a></li>
-                                    <li><a href="ui-modals.html">Modals</a></li>
-                                    <li><a href="ui-offcanvas.html">Offcavas</a></li>
-                                    <li><a href="ui-rangeslider.html">Range Slider</a></li>
-                                    <li><a href="ui-session-timeout.html">Session Timeout</a></li>
-                                    <li><a href="ui-pagination.html">Pagination</a></li>
-                                    <li><a href="ui-progressbars.html">Progress Bars</a></li>
-                                    <li><a href="ui-sweet-alert.html">Sweetalert 2</a></li>
-                                    <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
-                                    <li><a href="ui-typography.html">Typography</a></li>
-                                    <li><a href="ui-video.html">Video</a></li>
-                                    <li><a href="ui-popover-tooltips.html">Popovers &amp; Tooltips</a></li>
-                                    <li><a href="ui-rating.html">Rating</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="waves-effect">
-                                    <i class="ri-eraser-fill"></i>
-                                    <span class="badge rounded-pill bg-danger float-end">8</span>
-                                    <span>Setting</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="form-elements.html">Form Elements</a></li>
-                                    <li><a href="form-validation.html">Form Validation</a></li>
-                                    <li><a href="form-advanced.html">Form Advanced Plugins</a></li>
-                                    <li><a href="form-editors.html">Form Editors</a></li>
-                                    <li><a href="form-uploads.html">Form File Upload</a></li>
-                                    <li><a href="form-xeditable.html">Form X-editable</a></li>
-                                    <li><a href="form-wizard.html">Form Wizard</a></li>
-                                    <li><a href="form-mask.html">Form Mask</a></li>
-                                </ul>
-                            </li>
-
-                         
-                        </ul>
-                    </div>
-                    <!-- Sidebar -->
-                </div>
-            </div>
+           @include('layouts.sidebar')
             <!-- Left Sidebar End -->
 
             
@@ -265,6 +107,19 @@
             <div class="main-content">
 
                 <div class="page-content">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0">Dashboard</h4>
+
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">eMINERBA</a></li>
+                                    <li class="breadcrumb-item active">Dashboard</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
                     @yield('content')
                 </div>
                 <!-- End Page-content -->
@@ -287,52 +142,7 @@
         <!-- END layout-wrapper -->
 
         <!-- Right Sidebar -->
-        <div class="right-bar">
-            <div data-simplebar class="h-100">
-                <div class="rightbar-title d-flex align-items-center px-3 py-4">
-            
-                    <h5 class="m-0 me-2">Settings</h5>
-
-                    <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
-                        <i class="mdi mdi-close noti-icon"></i>
-                    </a>
-                </div>
-
-                <!-- Settings -->
-                <hr class="mt-0" />
-                <h6 class="text-center mb-0">Tampilan</h6>
-
-                <div class="p-4">
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-1.png')}}" class="img-thumbnail" alt="layout-1">
-                    </div>
-
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
-                        <label class="form-check-label" for="light-mode-switch">Light Mode</label>
-                    </div>
-    
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-2.png')}}" class="img-thumbnail" alt="layout-2">
-                    </div>
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css">
-                        <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
-                    </div>
-    
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-3.png')}}" class="img-thumbnail" alt="layout-3">
-                    </div>
-                    <div class="form-check form-switch mb-5">
-                        <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css">
-                        <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
-                    </div>
-
-            
-                </div>
-
-            </div> <!-- end slimscroll-menu-->
-        </div>
+      
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->
