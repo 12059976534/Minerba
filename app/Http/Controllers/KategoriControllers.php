@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Helpers\GlobalHelper;
 use App\Models\kategori;
 use Illuminate\Http\Request;
 use DB;
