@@ -7,6 +7,7 @@ use App\Models\News;
 use App\Models\kategori;
 use Image;
 use DB;
+use Auth;
 
 class NewsControllers extends Controller
 {
@@ -45,6 +46,7 @@ class NewsControllers extends Controller
         DB::beginTransaction();
         try {
             $input['slug'] = GlobalHelper::generateSlug($input['title'], 'news', 'slug');
+            $input['user_id'] = Auth::user()->id;
             $news = News::create($input);
             if($request->hasFile('image')){
                 $potonews = $request->file('image');

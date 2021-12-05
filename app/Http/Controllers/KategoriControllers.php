@@ -41,6 +41,7 @@ class KategoriControllers extends Controller
         // dd($input);
         DB::beginTransaction();
         try {
+            $input['slug'] = GlobalHelper::generateSlug($input['name'], 'news_categories', 'slug');
             $kategori = Kategori::create($input);
             DB::commit();
        
@@ -107,6 +108,8 @@ class KategoriControllers extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table("news_categories")->where('id',$id)->delete();
+        return redirect()->route('kategori.index')
+                        ->with('success','Kategori deleted successfully');
     }
 }
