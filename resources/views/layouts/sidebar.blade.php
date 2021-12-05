@@ -43,8 +43,8 @@
                         <span>News</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="email-inbox.html">News</a></li>
-                        <li><a href="email-read.html">News Kategori</a></li>
+                        <li><a href="{{ route('news.index') }}">News</a></li>
+                        <li><a href="{{ route('kategori.index') }}">News Kategori</a></li>
                     </ul>
                 </li>
                 <li>
