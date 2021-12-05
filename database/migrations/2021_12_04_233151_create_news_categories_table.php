@@ -15,7 +15,10 @@ class CreateNewsCategoriesTable extends Migration
     {
         Schema::create('news_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('slug', 255)->unique();
+            $table->string('name', 255);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

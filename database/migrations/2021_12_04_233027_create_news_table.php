@@ -22,6 +22,7 @@ class CreateNewsTable extends Migration
             $table->string('image', 255)->nullable();
             $table->integer('views')->default('0');
             $table->tinyInteger('status')->default('1');
+            $table->bigInteger('user_id');
             $table->timestamps();
             $table->softDeletes();
         });
