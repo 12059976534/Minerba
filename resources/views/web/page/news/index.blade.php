@@ -37,14 +37,13 @@
                 <!-- Start of Blog Posts -->
                 <div class="col-md-8 col-xs-12 blog-posts-wrapper">
 
-
-
                     <!-- Start of Blog Post Article 1 -->
+                    @foreach($data as $d)
                     <article class="col-md-12 blog-post">
 
                         <!-- Blog Post Thumbnail -->
                         <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAvvJi6l-Qr0oGbL82CoyhzwTe38LggckRzg&usqp=CAU" class="img-responsive" alt=""></a>
+                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="{{ asset('images/news/thumbnails/thumbnail_'.$d->image) }}" class="img-responsive" alt=""></a>
                             <div class="date">
                                 <span class="day">11</span>
                                 <span class="publish-month">Mar</span>
@@ -53,17 +52,19 @@
 
                         <!-- Blog Post Description -->
                         <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">tambang batu bara</a></h5>
+                            <h5><a href="blog-post-right-sidebar.html">{{$d->title}}</a></h5>
                             <div class="post-detail pt10 pb20">
                                 <span><i class="fa fa-user"></i>Author</span>
                                 <span><i class="fa fa-clock-o"></i>4:30</span>
                                 <span><i class="fa fa-comments-o"></i>12 Comments</span>
                             </div>
 
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
+                            <p>{!! Str::limit($d->content, 100) !!}</p>
+                            <a href="{{ route('conten',$d->slug2) }}" class="btn btn-blue btn-effect mt10">read more</a>
+                            
                         </div>
                     </article>
+                    @endforeach
                     <!-- End of Blog Post Article 1 -->
 
                     <!-- Start of Pagination -->

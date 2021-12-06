@@ -73,7 +73,7 @@
                             <!-- Mobile Menu Title -->
                             <li class="mobile-title">
                                 <h4>main menu</h4></li>
-
+                                  
                             <!-- Simple Menu Item -->
                             <li class="dropdown simple-menu ">
                                 <a href="{{ route('home-web') }}" >home</a>
@@ -83,7 +83,13 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/news">Mining Investment</a></li>
+                                    
+                                    <li><a href="{{url('news/MINING IVESTMENT')}}">MINING INVESTEMENT</a></li>
+                                    <li><a href="{{url('news/MINING OPERATION')}}">MINING OPERATION</a></li>
+                                    <li><a href="{{url('news/ENVIROMENTAL CSR AND HSE')}}">ENVIROMENTAL CSR AND HSE</a></li>
+                                    <li><a href="{{url('news/MINING REGULATION')}}">MINING REGULATION</a></li>
+                                    <li><a href="{{url('news/ENERGI')}}">ENERGY</a></li>
+                                    
                                 </ul>
                             </li>
 
