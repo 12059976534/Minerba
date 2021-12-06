@@ -177,8 +177,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
-        'Intervention\Image\ImageServiceProvider'
-
+        Intervention\Image\ImageServiceProvider::class
     ],
 
     /*
