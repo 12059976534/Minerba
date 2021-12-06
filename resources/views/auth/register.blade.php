@@ -18,6 +18,7 @@
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
 
@@ -41,13 +42,48 @@
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="mb-4">
+                                                <!-- <div class="mb-4">
                                                     <label class="form-label" for="name">{{ __('Name') }}</label>
                                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Username" required autocomplete="name" autofocus>
+                                                </div> -->
+                                                <label class="form-label" for="inputGroupSelect03">Salutation</label>
+                                                <div class="input-group mb-3">
+                                                        <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                                            <option selected>{{ __('Name') }}</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
                                                 </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="fullname">Fullname</label>
+                                                    <input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="eaxample@example.com" required autocomplete="email" autofocus>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="fullname">Telephone</label>
+                                                    <input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="eaxample@example.com" required autocomplete="email" autofocus>
+                                                </div>
+
                                                 <div class="mb-4">
                                                     <label class="form-label" for="username">Email</label>
                                                     <input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="eaxample@example.com" required autocomplete="email" autofocus>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="username">Company Name</label>
+                                                    <input type="text" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="PT.Name..." required autocomplete="email" autofocus>
+                                                </div>
+                                                <label class="form-label" for="inputGroupSelect03">Type of User</label>
+                                                <div class="input-group mb-3">
+                                                        <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                                            <option selected>{{ __('Name') }}</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="Company Addres">Company Addres</label>
+                                                    <textarea name="" id="Company Addres" cols="38" rows="3"></textarea>
                                                 </div>
                                                 <div class="mb-4">
                                                     <label class="form-label" for="userpassword">{{ __('Password') }}</label>
@@ -57,6 +93,8 @@
                                                     <label class="form-label" for="userpassword">{{ __('Confirm Password') }}</label>
                                                     <input id="password-confirm" type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
                                                 </div>
+
+                                                <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div>
 
                                        
                                                 <div class="d-grid mt-4">
