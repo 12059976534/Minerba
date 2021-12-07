@@ -57,11 +57,11 @@
                                                 </div>
                                                 <div class="mb-4">
                                                     <label class="form-label" for="fullname">Fullname</label>
-                                                    <input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="eaxample@example.com" required autocomplete="email" autofocus>
+                                                    <input type="text" class="form-control @error('fullname') is-invalid @enderror"  name="fullname" value="{{ old('fullname') }}" placeholder="Enter Your FullName" required autocomplete="email" autofocus>
                                                 </div>
                                                 <div class="mb-4">
                                                     <label class="form-label" for="fullname">Telephone</label>
-                                                    <input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="eaxample@example.com" required autocomplete="email" autofocus>
+                                                    <input type="text" class="form-control @error('telphone') is-invalid @enderror"  name="telphone" value="{{ old('telphone') }}" placeholder="Enter Your Telphone" required autocomplete="telphone" autofocus>
                                                 </div>
 
                                                 <div class="mb-4">
@@ -70,7 +70,7 @@
                                                 </div>
                                                 <div class="mb-4">
                                                     <label class="form-label" for="username">Company Name</label>
-                                                    <input type="text" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" placeholder="PT.Name..." required autocomplete="email" autofocus>
+                                                    <input type="text" class="form-control @error('company_name') is-invalid @enderror"  name="company_name" value="{{ old('company_name') }}" placeholder="PT.Name..." required autocomplete="company_name" autofocus>
                                                 </div>
                                                 <label class="form-label" for="inputGroupSelect03">Type of User</label>
                                                 <div class="input-group mb-3">
@@ -83,7 +83,7 @@
                                                 </div>
                                                 <div class="mb-4">
                                                     <label class="form-label" for="Company Addres">Company Addres</label>
-                                                    <textarea name="" id="Company Addres" cols="38" rows="3"></textarea>
+                                                    <textarea name="" id="Company Addres" class="form-control"></textarea>
                                                 </div>
                                                 <div class="mb-4">
                                                     <label class="form-label" for="userpassword">{{ __('Password') }}</label>

@@ -18,7 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('company_name', 255);
             $table->longText('job_field');
             $table->timestamp('start_at');
-            $table->timestamp('end_at');
+            $table->timestamp('end_at')->default(\DB::raw('CURRENT_TIMESTAMP'));;
             $table->bigInteger('province_id');
             $table->bigInteger('city_id');
             $table->bigInteger('subdistrict_id');

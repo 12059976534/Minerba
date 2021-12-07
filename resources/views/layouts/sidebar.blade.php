@@ -50,12 +50,21 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-excavator"></i>
-                        <span>Mining</span>
+                        <span>Mining Product</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="email-inbox.html">Inbox</a></li>
-                        <li><a href="email-read.html">Read Email</a></li>
-                        <li><a href="email-compose.html">Email Compose</a></li>
+                        <li><a href="{{ route('Product.index') }}">Product</a></li>
+                        <li><a href="{{ route('KategoriProduct.index') }}">Kategori Product</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-excavator"></i>
+                        <span>Mining comudity</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="email-inbox.html">Comudity</a></li>
+                        <li><a href="#">Kategori Product</a></li>
                     </ul>
                 </li>
 

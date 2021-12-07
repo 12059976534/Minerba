@@ -7,13 +7,13 @@
             <!-- Start of Page Title -->
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Mining Investment</h2>
+                    <h2>NEWS</h2>
                 </div>
             </div>
             <!-- End of Page Title -->
 
             <!-- Start of Breadcrumb -->
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-12">
                     <ul class="breadcrumb">
                         <li><a href="#">home</a></li>
@@ -21,7 +21,7 @@
                         <li class="active">blog - right sidebar</li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
             <!-- End of Breadcrumb -->
             
 
@@ -43,7 +43,7 @@
 
                         <!-- Blog Post Thumbnail -->
                         <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="{{ asset('images/news/thumbnails/thumbnail_'.$d->image) }}" class="img-responsive" alt=""></a>
+                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="{{ asset('images/news/'.$d->image) }}" class="img-responsive" alt=""></a>
                             <div class="date">
                                 <span class="day">11</span>
                                 <span class="publish-month">Mar</span>
@@ -55,11 +55,9 @@
                             <h5><a href="blog-post-right-sidebar.html">{{$d->title}}</a></h5>
                             <div class="post-detail pt10 pb20">
                                 <span><i class="fa fa-user"></i>Author</span>
-                                <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
                             </div>
 
-                            <p>{!! Str::limit($d->content, 100) !!}</p>
+                            <p>{!! Str::limit($d->content, 250) !!}</p>
                             <a href="{{ route('conten',$d->slug2) }}" class="btn btn-blue btn-effect mt10">read more</a>
                             
                         </div>
@@ -70,11 +68,7 @@
                     <!-- Start of Pagination -->
                     <div class="col-md-12">
                         <ul class="pagination list-inline text-center">
-                            <li class="active"><a href="javascript:void(0)">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">Next</a></li>
+                            {{ $data->links() }}
                         </ul>
                     </div>
                     <!-- End of Pagination -->
@@ -151,7 +145,7 @@
 
 
                     <!-- Start of Newsletter -->
-                    <div class="col-md-12 mt40">
+                    {{-- <div class="col-md-12 mt40">
                         <h4 class="widget-title">newsletter</h4>
 
                         <!-- Start Mailchimp Form -->
@@ -169,12 +163,12 @@
                             </div>
                         </form>
                         <!-- End of Mailchimp Form -->
-                    </div>
+                    </div> --}}
                     <!-- End of Newsletter -->
 
 
                     <!-- Start of Trending Tags -->
-                    <div class="col-md-12 mt40">
+                    {{-- <div class="col-md-12 mt40">
                         <h4 class="widget-title">trending tags</h4>
 
                         <!-- Tags Wrapper -->
@@ -192,7 +186,7 @@
                             <a href="#" class="tag-link">themeforest</a>
                             <a href="#" class="tag-link">web art</a>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End of Trending Tags -->
 
 
@@ -266,7 +260,7 @@
 
 
                     <!-- Start of Categories -->
-                    <div class="col-md-12 mt40">
+                    {{-- <div class="col-md-12 mt40">
                         <h4 class="widget-title">categories</h4>
 
                         <ul class="sidebar-list">
@@ -278,11 +272,11 @@
                             <li><a href="#">life</a></li>
                             <li><a href="#">finance</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- End of Categories -->
 
                     <!-- Start of Archives -->
-                    <div class="col-md-12 mt40">
+                    {{-- <div class="col-md-12 mt40">
                         <h4 class="widget-title">archives</h4>
 
                         <ul class="sidebar-list">
@@ -292,7 +286,7 @@
                             <li><a href="#">april</a></li>
                             <li><a href="#">may</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- End of Archives -->
 
                 </div>

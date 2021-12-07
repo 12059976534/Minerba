@@ -9,7 +9,9 @@ use App\Http\Controllers\NewsControllers;
 use App\Http\Controllers\KategoriControllers;
 use App\Http\Controllers\web\HomeControllers;
 use App\Http\Controllers\web\NewsController;
-use App\Http\Controllers\web\NewsDetailController;
+use App\Http\Controllers\KategoriProductControllers;
+use App\Http\Controllers\ProductControllers;
+
 
 
 /*
@@ -46,4 +48,6 @@ Route::group(['middleware' => ['auth'],'prefix' => 'admin'], function() {
     Route::resource('permission', PermissionControllers::class);
     Route::resource('news', NewsControllers::class);
     Route::resource('kategori', KategoriControllers::class);
+    Route::resource('KategoriProduct', KategoriProductControllers::class);
+    Route::resource('Product', ProductControllers::class);
 });

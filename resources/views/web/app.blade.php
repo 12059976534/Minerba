@@ -88,7 +88,7 @@
                                     <li><a href="{{url('news/MINING OPERATION')}}">MINING OPERATION</a></li>
                                     <li><a href="{{url('news/ENVIROMENTAL CSR AND HSE')}}">ENVIROMENTAL CSR AND HSE</a></li>
                                     <li><a href="{{url('news/MINING REGULATION')}}">MINING REGULATION</a></li>
-                                    <li><a href="{{url('news/ENERGI')}}">ENERGY</a></li>
+                                    <li><a href="{{url('news/ENERGY')}}">ENERGY</a></li>
                                     
                                 </ul>
                             </li>
