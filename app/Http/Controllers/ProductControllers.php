@@ -38,7 +38,52 @@ class ProductControllers extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        // dd($input);
+        DB::beginTransaction();
+        try {
+            $input['slug'] = GlobalHelper::generateSlug($input['title'], 'news', 'slug');
+            $input['user_id'] = Auth::user()->id;
+            $news = News::create($input);
+            if($request->hasFile('image')){
+                $potonews = $request->file('image');
+                $path = public_path('/images/news');
+                $thumbnail_path = $path . '/thumbnails';
+    
+                if (!is_dir($path)) {
+                    mkdir($path, 0777, TRUE);
+                }
+                
+                if (!is_dir($thumbnail_path)) {
+                    mkdir($thumbnail_path, 0777, TRUE);
+                }
+
+                $news_poto = 'news_'. $news->id . '.' . $request->file('image')->extension();
+            
+                $fotonewsThumbPath = $thumbnail_path . '/' . 'thumbnail_' . $news_poto;
+                $fotonewsThumb = Image::make($potonews->getRealPath())->resize(100, null, function ($constraint) {
+                                        $constraint->aspectRatio();
+                                    });
+                $SimpanFotonewsThumb = Image::make($fotonewsThumb)->save($fotonewsThumbPath);
+                
+                /* resize ukuran foto */
+                $fotonewsPath = $path . '/' . $news_poto;
+                $oriFotonews  = Image::make($potonews->getRealPath())->resize(1000, null, function ($constraint) {
+                                        $constraint->aspectRatio();
+                                    });
+                $simpanFotonews = Image::make($oriFotonews)->save($fotonewsPath);
+            
+                $update['image'] = $news_poto;
+                $news->update($update);
+            }
+
+            DB::commit();
+       
+            return redirect(route('news.index'))->with('success', 'News berhasil ditambahkan');
+        } catch (Exception $e) {
+            DB::rollBack();
+            return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
+        }
     }
 
     /**
