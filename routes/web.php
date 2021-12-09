@@ -7,10 +7,11 @@ use App\Http\Controllers\RoleControllers;
 use App\Http\Controllers\UsersControllers;
 use App\Http\Controllers\NewsControllers;
 use App\Http\Controllers\KategoriControllers;
+use App\Http\Controllers\web\DashboardController;
 use App\Http\Controllers\web\HomeControllers;
 use App\Http\Controllers\web\NewsController;
 use App\Http\Controllers\web\NewsDetailController;
-
+use App\Http\Controllers\web\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,6 @@ use App\Http\Controllers\web\NewsDetailController;
 
 Auth::routes();
 
-
 Route::get('/', [HomeControllers::class, 'index'])->name('home-web');
 Route::get('/news/{kategori}', [NewsController::class, 'index'])->name('news-web');
 Route::get('/conten/{slug:slug}', [NewsController::class, 'detail'])->name('conten');
@@ -36,10 +36,12 @@ Route::get('/karir', [App\Http\Controllers\CarrierControllers::class, 'index'])-
 Route::get('/tender', [App\Http\Controllers\TenderCotrollers::class, 'index'])->name('tender');
 Route::get('/prospek', [App\Http\Controllers\ProspekController::class, 'index'])->name('prospek'); 
 Route::get('/regulasi', [App\Http\Controllers\RegulationsController::class, 'index'])->name('regulasi');
-  
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('profile', ProfileController::class)->only(['index', 'edit']);
+});
 
-
-Route::group(['middleware' => ['auth'],'prefix' => 'admin'], function() {
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('roles', RoleControllers::class);
     Route::resource('users', UsersControllers::class);

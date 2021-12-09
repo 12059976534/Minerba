@@ -16,7 +16,7 @@
     <meta name="author" content="GnoDesign">
 
     <!-- Website Title -->
-    <title>Cariera - Job Board HTML Template</title>
+    <title>E-Minerba</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
 
@@ -31,9 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/responsive.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/animate.css')}}">
-
-    
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('web/css/spacing.min.css')}}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -166,11 +164,22 @@
                                 </ul>
                             </li>
 
-                            <!-- Login Menu Item -->
-                            <li class="menu-item login-btn">
-                                <a id="modal_trigger" href="javascript:void(0)" role="button"><i class="fa fa-lock"></i>login</a>
-                            </li>
+                            @if(!auth()->check())
+                                <li class="menu-item btn btn-blue">
+                                    <a href="{{ route('login') }}" style="color:#fff" role="button"><i class="fa fa-lock"></i> Login</a>
+                                </li>
 
+                                <li class="menu-item">
+                                    <a href="{{ route('register') }}" role="button">Register</a>
+                                </li>
+                            @else
+                                <li class="menu-item btn btn-blue">
+                                    <a href="{{ route('logout') }}" style="color:#fff" role="button" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                     <!-- End of Main Nav -->
@@ -183,7 +192,6 @@
     <!-- =============== End of Header 1 Navigation =============== -->
 
     @yield('content')
-   
 
     <!-- =============== Start of Footer 1 =============== -->
     <footer class="footer1">
@@ -418,17 +426,9 @@
     </footer>
     <!-- =============== End of Footer 1 =============== -->
 
-
-
-
-
     <!-- ===== Start of Back to Top Button ===== -->
     <a href="#" class="back-top"><i class="fa fa-chevron-up"></i></a>
     <!-- ===== End of Back to Top Button ===== -->
-
-
-
-
 
     <!-- ===== Start of Login Pop Up div ===== -->
     <div class="cd-user-modal">
@@ -509,7 +509,7 @@
     <script src="{{ asset('web/js/countdown.js')}}"></script>
     <script src="{{ asset('web/js/isotope.min.js')}}"></script>
     <script src="{{ asset('web/js/custom.js')}}"></script>
-
+    @yield('script')
 </body>
 
 </html>
