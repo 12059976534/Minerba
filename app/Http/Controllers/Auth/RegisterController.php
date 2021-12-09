@@ -5,10 +5,14 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use Spatie\Permission\Models\Role;
+use App\Models\UserPersonalInformation;
+use Carbon\Carbon;
+use Exception;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -30,7 +34,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = 'profile';
 
     /**
      * Create a new controller instance.
@@ -51,8 +55,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255', 'regex:/^[ a-zA-Z]+$/u'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'telephone' => ['required', 'numeric', 'digits_between:5,15', 'unique:user_personal_informations', 'unique:companies'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -65,10 +70,49 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        DB::beginTransaction();
+
+        try {
+            $role = $data['type_of_user'];
+            $user = User::create([
+                'salutation' => $data['salutation'],
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+            ]);
+
+            if($role == 'personal'){
+                $personal_information = [
+                    'unique_id' => $user->id . Carbon::now()->format('ymdHis'),
+                    'address' => '',
+                    'province_id' => '0',
+                    'city_id' => '0',
+                    'subdistrict_id' => '0',
+                    'urban_village_id' => '0',
+                    'postal_code' => '',
+                    'telephone' => $data['telephone'],
+                    'user_id' => $user->id
+                ];
+                UserPersonalInformation::create($personal_information);
+            } else {
+                $company = [
+                    'slug' => GlobalHelper::generateSlug($data['company_name'], 'companies', 'slug'),
+                    'address' => $data['company_address'],
+                    'email' => $data['email'],
+                    'name' => $data['company_name'],
+                    'telephone' => $data['telephone']
+                ];
+
+                $company = Company::create($company);
+                $user->update(['company_id' => $company->id]);
+            }
+            
+            $user->assignRole($role);
+            DB::commit();
+            return $user;
+        } catch (Exception $e) {
+            DB::rollBack();
+            return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
+        }
     }
 }
