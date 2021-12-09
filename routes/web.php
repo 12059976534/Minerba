@@ -11,6 +11,7 @@ use App\Http\Controllers\web\HomeControllers;
 use App\Http\Controllers\web\NewsController;
 use App\Http\Controllers\KategoriProductControllers;
 use App\Http\Controllers\ProductControllers;
+use App\Http\Controllers\Kategori_Comodity_Controller;
 
 
 
@@ -49,5 +50,6 @@ Route::group(['middleware' => ['auth'],'prefix' => 'admin'], function() {
     Route::resource('news', NewsControllers::class);
     Route::resource('kategori', KategoriControllers::class);
     Route::resource('KategoriProduct', KategoriProductControllers::class);
+    Route::resource('Kategory_comodity', Kategori_Comodity_Controller::class);
     Route::resource('Product', ProductControllers::class);
 });

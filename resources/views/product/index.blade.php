@@ -45,7 +45,7 @@
                         @foreach ($data as $d)
                         <tr>
                            <td></td>
-                           <td>gambar</td>
+                           <td><img src="{{ asset('images/product/thumbnails/thumbnail_'.$d->main_image) }}" alt=""></td>
                             <td>{{ $d->name }}</td>
                             <td>batu bara</td>
                             <td><div class="btn-group">

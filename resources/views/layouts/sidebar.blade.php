@@ -55,7 +55,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('Product.index') }}">Product</a></li>
                         <li><a href="{{ route('KategoriProduct.index') }}">Kategori Product</a></li>
-                        <li><a href="#">Kategori Comudity</a></li>
+                        <li><a href="{{ route('Kategory_comodity.index') }}">Kategori Comudity</a></li>
                     </ul>
                 </li>
                 <li>

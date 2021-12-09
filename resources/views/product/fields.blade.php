@@ -26,10 +26,17 @@
                        <select name="product_category_id" class="form-control" id="">
                         <option value="">- Select Option -</option>
                            @foreach ($kategori as $k)
-                           <option value="{{ $k->id }}">{{ $k->name }}</option>
+                           <option value="{{ $k->id }}  {{ isset($data->product_category_id) ? $k->id == $data->product_category_id ? "selected" : "" : "" }}">{{ $k->name }}</option>
                            @endforeach
                        
                        </select>
+                    </div>
+                </div>
+               
+                <div class="mb-3 row">
+                    <label for="example-text-input" class="col-md-2 col-form-label">Deskripsi</label>
+                    <div class="col-md-10">
+                      <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -41,25 +48,12 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="example-text-input" class="col-md-2 col-form-label">Deskripsi</label>
-                    <div class="col-md-10">
-                      <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
-                    </div>
-                </div>
-                <div class="mb-3 row">
                     <label for="example-text-input" class="col-md-2 col-form-label">Image</label>
                     <div class="col-md-10">
-                        <input type="file" class="form-control">
+                        <input type="file" name="image" class="form-control">
                     </div>
                 </div>
-                {{-- <div class="mb-3 row">
-                    <label for="example-text-input" class="col-md-2 col-form-label">Company</label>
-                    <div class="col-md-10">
-                       <select name="company" class="form-control" id="">
-                        <option value="1">- Select Option -</option>
-                       </select>
-                    </div>
-                </div> --}}
+               
                <div class="">
                     <a href="{{ route('Product.index') }}" class="btn btn-secondary">Close</a>
                     <button type="submit" class="btn btn-primary">Save changes</button>

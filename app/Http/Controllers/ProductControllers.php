@@ -5,6 +5,8 @@ use App\Helpers\GlobalHelper;
 use App\Models\Product;
 use App\Models\KategoriProduct;
 use Illuminate\Http\Request;
+use DB;
+use Image;
 
 class ProductControllers extends Controller
 {
@@ -30,6 +32,7 @@ class ProductControllers extends Controller
         return view('product.create',compact('kategori'));
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -42,12 +45,15 @@ class ProductControllers extends Controller
         // dd($input);
         DB::beginTransaction();
         try {
-            $input['slug'] = GlobalHelper::generateSlug($input['title'], 'news', 'slug');
-            $input['user_id'] = Auth::user()->id;
-            $news = News::create($input);
+            $input['slug'] = GlobalHelper::generateSlug($input['name'], 'products', 'slug');
+            $input['company_id'] = 1;
+            $input['admin_fee'] = 1;
+            $input['selling_price'] = 3000;
+            $input['views'] = 20;
+            $product = Product::create($input);
             if($request->hasFile('image')){
-                $potonews = $request->file('image');
-                $path = public_path('/images/news');
+                $potoproduct = $request->file('image');
+                $path = public_path('/images/product');
                 $thumbnail_path = $path . '/thumbnails';
     
                 if (!is_dir($path)) {
@@ -58,28 +64,28 @@ class ProductControllers extends Controller
                     mkdir($thumbnail_path, 0777, TRUE);
                 }
 
-                $news_poto = 'news_'. $news->id . '.' . $request->file('image')->extension();
+                $product_poto = 'product_'. $product->id . '.' . $request->file('image')->extension();
             
-                $fotonewsThumbPath = $thumbnail_path . '/' . 'thumbnail_' . $news_poto;
-                $fotonewsThumb = Image::make($potonews->getRealPath())->resize(100, null, function ($constraint) {
+                $fotoproductThumbPath = $thumbnail_path . '/' . 'thumbnail_' . $product_poto;
+                $fotoproductThumb = Image::make($potoproduct->getRealPath())->resize(100, null, function ($constraint) {
                                         $constraint->aspectRatio();
                                     });
-                $SimpanFotonewsThumb = Image::make($fotonewsThumb)->save($fotonewsThumbPath);
+                $SimpanFotoproductThumb = Image::make($fotoproductThumb)->save($fotoproductThumbPath);
                 
                 /* resize ukuran foto */
-                $fotonewsPath = $path . '/' . $news_poto;
-                $oriFotonews  = Image::make($potonews->getRealPath())->resize(1000, null, function ($constraint) {
+                $fotoproductPath = $path . '/' . $product_poto;
+                $oriFotoproduct  = Image::make($potoproduct->getRealPath())->resize(1000, null, function ($constraint) {
                                         $constraint->aspectRatio();
                                     });
-                $simpanFotonews = Image::make($oriFotonews)->save($fotonewsPath);
+                $simpanFotoproduct = Image::make($oriFotoproduct)->save($fotoproductPath);
             
-                $update['image'] = $news_poto;
-                $news->update($update);
+                $update['main_image'] = $product_poto;
+                $product->update($update);
             }
 
             DB::commit();
        
-            return redirect(route('news.index'))->with('success', 'News berhasil ditambahkan');
+            return redirect(route('Product.index'))->with('success', 'product berhasil ditambahkan');
         } catch (Exception $e) {
             DB::rollBack();
             return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
@@ -105,7 +111,9 @@ class ProductControllers extends Controller
      */
     public function edit($id)
     {
-        //
+       $data = Product::find($id);
+       $kategori = KategoriProduct::all();
+       return view('product.edit',compact('data','kategori'));
     }
 
     /**
@@ -117,7 +125,50 @@ class ProductControllers extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        DB::beginTransaction();
+        try {
+            $product = Product::find($id);
+            $product->update($input);
+            if($request->hasFile('image')){
+                $potoproduct = $request->file('image');
+                $path = public_path('/images/product');
+                $thumbnail_path = $path . '/thumbnails';
+    
+                if (!is_dir($path)) {
+                    mkdir($path, 0777, TRUE);
+                }
+                
+                if (!is_dir($thumbnail_path)) {
+                    mkdir($thumbnail_path, 0777, TRUE);
+                }
+
+                $product_poto = 'product_'. $product->id . '.' . $request->file('image')->extension();
+            
+                $fotoproductThumbPath = $thumbnail_path . '/' . 'thumbnail_' . $product_poto;
+                $fotoproductThumb = Image::make($potoproduct->getRealPath())->resize(100, null, function ($constraint) {
+                                        $constraint->aspectRatio();
+                                    });
+                $SimpanFotoproductThumb = Image::make($fotoproductThumb)->save($fotoproductThumbPath);
+                
+                /* resize ukuran foto */
+                $fotoproductPath = $path . '/' . $product_poto;
+                $oriFotoproduct  = Image::make($potoproduct->getRealPath())->resize(1000, null, function ($constraint) {
+                                        $constraint->aspectRatio();
+                                    });
+                $simpanFotoproduct = Image::make($oriFotoproduct)->save($fotoproductPath);
+            
+                $update['main_image'] = $product_poto;
+                $product->update($update);
+            }
+
+            DB::commit();
+       
+            return redirect(route('Product.index'))->with('success', 'product berhasil ditambahkan');
+        } catch (Exception $e) {
+            DB::rollBack();
+            return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
+        }
     }
 
     /**
@@ -128,6 +179,8 @@ class ProductControllers extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table("products")->where('id',$id)->delete();
+        return redirect()->route('Products.index')
+                        ->with('success','News deleted successfully');
     }
 }

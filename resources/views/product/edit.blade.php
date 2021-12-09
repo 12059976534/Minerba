@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-    <form action="{{ route('Product.update',$data->id) }}" method="post">
+    <form action="{{ route('Product.update',$data->id) }}" method="post"  enctype="multipart/form-data">
         @csrf
         @method('PUT')
         @include('product.fields')

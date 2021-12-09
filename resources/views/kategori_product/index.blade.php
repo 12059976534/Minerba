@@ -88,8 +88,6 @@
    <script>
        $(document).ready( function () {
   
-
-
     $('#datatable').DataTable( {
         "fnRowCallback": function( nRow, aData, iDisplayIndex, iDisplayIndexFull ) {
         $('td:eq(0)', nRow).html(iDisplayIndexFull +1);

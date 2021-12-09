@@ -45,7 +45,7 @@ class KategoriProductControllers extends Controller
             $kategori = KategoriProduct::create($input);
             DB::commit();
        
-            return redirect(route('Comuditykategori.index'))->with('success', 'Kategori berhasil ditambahkan');
+            return redirect(route('KategoriProduct.index'))->with('success', 'Kategori berhasil ditambahkan');
         } catch (Exception $e) {
             DB::rollBack();
             return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
@@ -93,7 +93,7 @@ class KategoriProductControllers extends Controller
             $kategori->update($input);
             DB::commit();
        
-            return redirect(route('Comuditykategori.index'))->with('success', 'Kategori berhasil di update');
+            return redirect(route('KategoriProduct.index'))->with('success', 'Kategori berhasil di update');
         } catch (Exception $e) {
             DB::rollBack();
             return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
@@ -109,7 +109,7 @@ class KategoriProductControllers extends Controller
     public function destroy($id)
     {
         DB::table("product_categories")->where('id',$id)->delete();
-        return redirect()->route('Comuditykategori.index')
+        return redirect()->route('KategoriProduct.index')
                         ->with('success','Kategori deleted successfully');
     }
 }
