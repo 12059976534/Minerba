@@ -43,7 +43,10 @@
                     <label for="example-text-input" class="col-md-2 col-form-label">Comodity</label>
                     <div class="col-md-10">
                        <select name="comodity_id" class="form-control" id="">
-                           <option value="1">- Select Option -</option>
+                          <option value="">- Select Option -</option>
+                          @foreach ($Kategoory_comodity as $k)
+                          <option value="{{ $k->id }}  {{ isset($data->comodity_id) ? $k->id == $data->comodity_id ? "selected" : "" : "" }}">{{ $k->name }}</option>
+                          @endforeach
                        </select>
                     </div>
                 </div>

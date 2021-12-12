@@ -12,6 +12,7 @@ use App\Http\Controllers\web\NewsController;
 use App\Http\Controllers\KategoriProductControllers;
 use App\Http\Controllers\ProductControllers;
 use App\Http\Controllers\Kategori_Comodity_Controller;
+use App\Http\Controllers\EducationController;
 
 
 
@@ -33,7 +34,7 @@ Auth::routes();
 Route::get('/', [HomeControllers::class, 'index'])->name('home-web');
 Route::get('/news/{kategori}', [NewsController::class, 'index'])->name('news-web');
 Route::get('/conten/{slug:slug}', [NewsController::class, 'detail'])->name('conten');
-Route::get('/comodity', [App\Http\Controllers\MiningComodiyControllers::class, 'index'])->name('comodity');
+Route::get('/comodity/{kategori:slug}', [App\Http\Controllers\MiningComodiyControllers::class, 'index']);
 Route::get('/contruktor', [App\Http\Controllers\MiningConstruktorControllers::class, 'index'])->name('contruktor');
 Route::get('/karir', [App\Http\Controllers\CarrierControllers::class, 'index'])->name('karir');
 Route::get('/tender', [App\Http\Controllers\TenderCotrollers::class, 'index'])->name('tender');
@@ -51,5 +52,6 @@ Route::group(['middleware' => ['auth'],'prefix' => 'admin'], function() {
     Route::resource('kategori', KategoriControllers::class);
     Route::resource('KategoriProduct', KategoriProductControllers::class);
     Route::resource('Kategory_comodity', Kategori_Comodity_Controller::class);
+    Route::resource('educations', EducationController::class);
     Route::resource('Product', ProductControllers::class);
 });

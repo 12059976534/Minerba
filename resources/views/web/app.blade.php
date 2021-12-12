@@ -83,7 +83,7 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    
+                        
                                     <li><a href="{{url('news/MINING IVESTMENT')}}">MINING INVESTEMENT</a></li>
                                     <li><a href="{{url('news/MINING OPERATION')}}">MINING OPERATION</a></li>
                                     <li><a href="{{url('news/ENVIROMENTAL CSR AND HSE')}}">ENVIROMENTAL CSR AND HSE</a></li>
@@ -117,8 +117,8 @@
                             <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Commodity<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/comodity">COAL BATUBARA</a></li>
-                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
+                                    <li><a href="{{url('comodity/BTUBARA')}}">COAL BATUBARA</a></li>
+                                    <li><a href="{{url('comodity/emas')}}">GOLD EMAS</a></li>
                                     <li><a href="post-job.html">NICKEL NIKEL</a></li>
                                 </ul>
                             </li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Helpers\GlobalHelper;
 use App\Models\Product;
 use App\Models\KategoriProduct;
+use App\Models\Kategory_comodity;
 use Illuminate\Http\Request;
 use DB;
 use Image;
@@ -29,7 +30,8 @@ class ProductControllers extends Controller
     public function create()
     {
         $kategori = KategoriProduct::all();
-        return view('product.create',compact('kategori'));
+        $Kategoory_comodity = Kategory_comodity::all();
+        return view('product.create',compact('kategori','Kategoory_comodity'));
     }
 
 
@@ -47,6 +49,7 @@ class ProductControllers extends Controller
         try {
             $input['slug'] = GlobalHelper::generateSlug($input['name'], 'products', 'slug');
             $input['company_id'] = 1;
+            $input['comodity_id'] = 2;
             $input['admin_fee'] = 1;
             $input['selling_price'] = 3000;
             $input['views'] = 20;
@@ -180,7 +183,7 @@ class ProductControllers extends Controller
     public function destroy($id)
     {
         DB::table("products")->where('id',$id)->delete();
-        return redirect()->route('Products.index')
+        return redirect()->route('Product.index')
                         ->with('success','News deleted successfully');
     }
 }

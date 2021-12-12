@@ -15,10 +15,7 @@ class NewsController extends Controller
     }
 
     public function detail(News $slug){
-        
-        
         $related = DB::table('news')->where('news_category_id', $slug->news_category_id)->get();
-        
         return view('web.page.news.detail',['data'=> $slug, 'related' => $related]);
     }
 }

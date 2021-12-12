@@ -58,6 +58,7 @@
                         <li><a href="{{ route('Kategory_comodity.index') }}">Kategori Comudity</a></li>
                     </ul>
                 </li>
+                
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-feature-search"></i>
