@@ -1,20 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\web;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kategory_comodity;
 
-class MiningComodiyControllers extends Controller
+class CarrierControllers extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Kategory_comodity $slug)
+    public function index()
     {
-      
+        return view('web.page.karir.index');
     }
 
     /**
@@ -46,7 +41,7 @@ class MiningComodiyControllers extends Controller
      */
     public function show($id)
     {
-        //
+        return view('web.page.karir.employe.detail');
     }
 
     /**
