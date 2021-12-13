@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Kategory_comodity;
 
 class MiningComodiyControllers extends Controller
 {
@@ -11,9 +12,10 @@ class MiningComodiyControllers extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Kategory_comodity $slug)
     {
-        return view('web.page.mining_commodity.index');
+        
+        return view('web.page.mining_commodity.index',['data'=>$slug->product]);
     }
 
     /**
