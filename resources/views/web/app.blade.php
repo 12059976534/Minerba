@@ -93,6 +93,7 @@
                                     <li><a href="{{url('news/ENERGY')}}">ENERGY</a></li>
                                     
                                 </ul>
+                            </li> --}}
                              <!-- Simple Menu Item -->
 
                             <!-- Mega Menu Item -->
@@ -124,6 +125,8 @@
                             </li>
 
                             <!-- Simple Menu Item -->
+                            <li class="dropdown simple-menu ">
+                                <a href="{{ route('karir') }}" >Karir</a>
                             </li>
 
                             <!-- Simple Menu Item -->
