@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/responsive.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/animate.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/spacing.min.css')}}">
+    @yield('css')
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -78,7 +79,10 @@
                             </li>
 
                             <!-- Simple Menu Item -->
-                            <li class="dropdown simple-menu">
+                            <li class="dropdown simple-menu ">
+                                <a href="{{ url('news/all') }}" >News</a>
+                            </li>
+                            {{-- <li class="dropdown simple-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">News<i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown-menu" role="menu">
                                     
@@ -89,36 +93,12 @@
                                     <li><a href="{{url('news/ENERGY')}}">ENERGY</a></li>
                                     
                                 </ul>
-                            </li>
-
-                            <!-- Simple Menu Item -->
-                            <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Prospect<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/prospek">Batu Bara</a></li>
-                                    <li><a href="find-candidate-2.html">find a candidate 2</a></li>
-                                    <li><a href="post-job.html">post a job</a></li>
-                                </ul>
-                            </li>
-
+                            </li> --}}
                              <!-- Simple Menu Item -->
-                             <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Regulation<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/regulasi">Batu Bara</a></li>
-                                    <li><a href="find-candidate-2.html">find a candidate 2</a></li>
-                                    <li><a href="post-job.html">post a job</a></li>
-                                </ul>
-                            </li>
 
                             <!-- Mega Menu Item -->
-                            <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Commodity<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/comodity">COAL BATUBARA</a></li>
-                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
-                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
-                                </ul>
+                            <li class="dropdown simple-menu ">
+                                <a href="{{ route('comodity') }}" >Komoditas</a>
                             </li>
                             <!-- End of Mega Menu Item -->
 
@@ -145,13 +125,8 @@
                             </li>
 
                             <!-- Simple Menu Item -->
-                            <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Karir<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/contruktor">COAL BATUBARA</a></li>
-                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
-                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
-                                </ul>
+                            <li class="dropdown simple-menu ">
+                                <a href="{{ route('karir') }}" >Karir</a>
                             </li>
 
                             <!-- Simple Menu Item -->

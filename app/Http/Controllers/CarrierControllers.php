@@ -13,7 +13,7 @@ class CarrierControllers extends Controller
      */
     public function index()
     {
-        return view('web.page.karir.index');
+       
     }
 
     /**
@@ -45,7 +45,7 @@ class CarrierControllers extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
