@@ -122,11 +122,26 @@
                                     <a href="">
                                         <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                     </a>
-                                    <a href="">
-                                        <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                        </div>
-                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a href="">
+                                                    <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                       <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
                                     <a href="" class="row-md-2" style="color: black;" >
                                         <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                         Jakarta Selatan
@@ -164,11 +179,26 @@
                                     <a href="">
                                         <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                     </a>
-                                    <a href="">
-                                        <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                        </div>
-                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a href="">
+                                                    <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                       <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
                                     <a href="" class="row-md-2" style="color: black;" >
                                         <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                         Jakarta Selatan
@@ -206,11 +236,26 @@
                                     <a href="">
                                         <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                     </a>
-                                    <a href="">
-                                        <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                        </div>
-                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+                                            <td>
+                                                <a href="">
+                                                    <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                       <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
                                     <a href="" class="row-md-2" style="color: black;" >
                                         <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                         Jakarta Selatan
@@ -219,88 +264,6 @@
 
                             </div>
                         </div>
-                        <!-- End of Product 3 -->
-
-                              <!-- Start of Product 3 -->
-                              <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="product">
-
-                                <!-- Product Image -->
-                                <div class="product-image">
-
-                                    <a href="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="hover-zoom">
-                                        <img src="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="img-responsive" alt="">
-                                    </a>
-
-                                    <!-- Product overlay -->
-                                    <div class="product-overlay">
-                                        <a href="cart.html"><i class="fa fa-eye"></i>Lihat Detail</a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Product Description -->
-                                <div class="col-md deskripsi" style="margin: 5%;">
-                                    <a href="">
-                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">PT.Lamaru Bagun </div>
-                                    </a>
-                                    <a href="">
-                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
-                                    </a>
-                                    <a href="">
-                                        <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                        </div>
-                                    </a>
-                                    <a href="" class="row-md-2" style="color: black;" >
-                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
-                                        Jakarta Selatan
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                            <!-- End of Product 3 -->
-
-                                  <!-- Start of Product 3 -->
-                                  <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="product">
-        
-                                        <!-- Product Image -->
-                                        <div class="product-image">
-        
-                                            <a href="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="hover-zoom">
-                                                <img src="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="img-responsive" alt="">
-                                            </a>
-        
-                                            <!-- Product overlay -->
-                                            <div class="product-overlay">
-                                                <a href="cart.html"><i class="fa fa-eye"></i>Lihat Detail</a>
-                                            </div>
-        
-                                        </div>
-        
-                                        <!-- Product Description -->
-                                        <div class="col-md deskripsi" style="margin: 5%;">
-                                            <a href="">
-                                                <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">PT.Lamaru Bagun </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
-                                            </a>
-                                            <a href="">
-                                                <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                                    <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                                </div>
-                                            </a>
-                                            <a href="" class="row-md-2" style="color: black;" >
-                                                <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
-                                                Jakarta Selatan
-                                            </a>
-                                        </div>
-        
-                                    </div>
-                                </div>
                         <!-- End of Product 3 -->
 
                               <!-- Start of Product 3 -->
@@ -329,11 +292,26 @@
                                         <a href="">
                                             <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                         </a>
-                                        <a href="">
-                                            <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                                <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                            </div>
-                                        </a>
+                                        <table>
+                                            <tr >
+                                                <td style="padding: 5%;">
+                                                    <a href="">
+                                                        <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+    
+                                                <td>
+                                                    <a href="">
+                                                        <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                           <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
                                         <a href="" class="row-md-2" style="color: black;" >
                                             <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                             Jakarta Selatan
@@ -370,11 +348,26 @@
                                             <a href="">
                                                 <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                             </a>
-                                            <a href="">
-                                                <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                                    <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                                </div>
-                                            </a>
+                                            <table>
+                                                <tr >
+                                                    <td style="padding: 5%;">
+                                                        <a href="">
+                                                            <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                                <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+        
+                                                    <td>
+                                                        <a href="">
+                                                            <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                               <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </table>
                                             <a href="" class="row-md-2" style="color: black;" >
                                                 <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                                 Jakarta Selatan
@@ -411,11 +404,26 @@
                                         <a href="">
                                             <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                         </a>
-                                        <a href="">
-                                            <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                                <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                            </div>
-                                        </a>
+                                        <table>
+                                            <tr >
+                                                <td style="padding: 5%;">
+                                                    <a href="">
+                                                        <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+    
+                                                <td>
+                                                    <a href="">
+                                                        <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                           <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
                                         <a href="" class="row-md-2" style="color: black;" >
                                             <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                             Jakarta Selatan
@@ -452,11 +460,26 @@
                                             <a href="">
                                                 <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
                                             </a>
-                                            <a href="">
-                                                <div class="tombol" style="padding: 2%; width: 20%; background-color: rgb(105, 105, 105); border-radius: 15%;">
-                                                    <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Dirling</div>
-                                                </div>
-                                            </a>
+                                            <table>
+                                                <tr >
+                                                    <td style="padding: 5%;">
+                                                        <a href="">
+                                                            <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                                <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+        
+                                                    <td>
+                                                        <a href="">
+                                                            <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                               <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </table>
                                             <a href="" class="row-md-2" style="color: black;" >
                                                 <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
                                                 Jakarta Selatan
@@ -467,6 +490,118 @@
                                 </div>
                         <!-- End of Product 3 -->
 
+                              <!-- Start of Product 3 -->
+                              <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="product">
+    
+                                    <!-- Product Image -->
+                                    <div class="product-image">
+    
+                                        <a href="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="hover-zoom">
+                                            <img src="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="img-responsive" alt="">
+                                        </a>
+    
+                                        <!-- Product overlay -->
+                                        <div class="product-overlay">
+                                            <a href="cart.html"><i class="fa fa-eye"></i>Lihat Detail</a>
+                                        </div>
+    
+                                    </div>
+    
+                                    <!-- Product Description -->
+                                    <div class="col-md deskripsi" style="margin: 5%;">
+                                        <a href="">
+                                            <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">PT.Lamaru Bagun </div>
+                                        </a>
+                                        <a href="">
+                                            <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
+                                        </a>
+                                        <table>
+                                            <tr >
+                                                <td style="padding: 5%;">
+                                                    <a href="">
+                                                        <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                            <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+    
+                                                <td>
+                                                    <a href="">
+                                                        <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                           <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                        <a href="" class="row-md-2" style="color: black;" >
+                                            <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                            Jakarta Selatan
+                                        </a>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <!-- End of Product 3 -->
+
+                                  <!-- Start of Product 3 -->
+                                  <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="product">
+        
+                                        <!-- Product Image -->
+                                        <div class="product-image">
+        
+                                            <a href="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="hover-zoom">
+                                                <img src="https://awsimages.detik.net.id/visual/2018/05/07/ef341df1-188e-442f-9d92-8febfc3a3597.jpeg?w=650" class="img-responsive" alt="">
+                                            </a>
+        
+                                            <!-- Product overlay -->
+                                            <div class="product-overlay">
+                                                <a href="cart.html"><i class="fa fa-eye"></i>Lihat Detail</a>
+                                            </div>
+        
+                                        </div>
+        
+                                        <!-- Product Description -->
+                                        <div class="col-md deskripsi" style="margin: 5%;">
+                                            <a href="">
+                                                <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">PT.Lamaru Bagun </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Constraktor</div>
+                                            </a>
+                                            <table>
+                                                <tr >
+                                                    <td style="padding: 5%;">
+                                                        <a href="">
+                                                            <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                                <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+        
+                                                    <td>
+                                                        <a href="">
+                                                            <div class="tombol" style=" margin: 1px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                               <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">JORC</div>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </table>
+                                            <a href="" class="row-md-2" style="color: black;" >
+                                                <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                                Jakarta Selatan
+                                            </a>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                        <!-- End of Product 3 -->
+  
 
 
                    
