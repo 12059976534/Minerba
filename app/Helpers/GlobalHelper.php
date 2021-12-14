@@ -1,7 +1,9 @@
 <?php
 namespace App\Helpers;
 
+use App\Models\Company;
 use App\Models\Visitor;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Jenssegers\Agent\Agent;
@@ -79,5 +81,16 @@ class GlobalHelper {
 		$result = preg_replace("/[^0-9]/", "", $result);
 
         return $result;
+    }
+
+    public static function isVerifiedCompany()
+    {
+        if(!Auth::user()->hasRole('personal'))
+        {
+            $company = Company::where('id', Auth::user()->company_id)->first();
+            return $company ? $company->is_verified == 1 ? true : false : false;
+        }
+
+        return false;
     }
 }

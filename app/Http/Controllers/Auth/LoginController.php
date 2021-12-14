@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\GlobalHelper;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -41,6 +42,19 @@ class LoginController extends Controller
     
     protected function authenticated(Request $request, $user)
     {
-        return !$user->is_administrator ? redirect('/profile') : redirect('admin');
+        if(!$user->is_administrator)
+        {
+            if(!$user->hasRole('personal')){
+                if(!GlobalHelper::isVerifiedCompany()){
+                    return redirect('my-company/edit')->with('warning', 'Data perusahaan belum diverifikasi');
+                }
+
+                return redirect('dashboard');
+            }
+            
+            return redirect('profile');
+        }
+            
+        return redirect('admin');
     }
 }

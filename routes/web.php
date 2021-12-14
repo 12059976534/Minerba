@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PermissionControllers;
@@ -17,8 +18,9 @@ use App\Http\Controllers\KategoriProductControllers;
 use App\Http\Controllers\ProductControllers;
 use App\Http\Controllers\Kategori_Comodity_Controller;
 use App\Http\Controllers\EducationController;
-
-
+use App\Http\Controllers\web\JobFieldController;
+use App\Http\Controllers\web\MyCompanyController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +49,13 @@ Route::get('/prospek', [App\Http\Controllers\ProspekController::class, 'index'])
 Route::get('/regulasi', [App\Http\Controllers\RegulationsController::class, 'index'])->name('regulasi');
 Route::group(['middleware' => ['auth']], function() {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-    Route::resource('profile', ProfileController::class)->only(['index', 'edit']);
+    Route::resource('profile', ProfileController::class)->only(['index', 'edit', 'update']);
+
+    Route::resource('my-company', MyCompanyController::class)->only('index');
+    Route::get('my-company/edit', [MyCompanyController::class, 'edit'])->name('my-company.edit');
+    Route::put('my-company', [MyCompanyController::class, 'update'])->name('my-company.update');
+
+    Route::resource('job-field', JobFieldController::class);
 });
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
@@ -61,4 +69,13 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
     Route::resource('Kategory_comodity', Kategori_Comodity_Controller::class);
     Route::resource('educations', EducationController::class);
     Route::resource('Product', ProductControllers::class);
+});
+
+/* AJAX */
+Route::prefix('ajax')->group(function () {
+    Route::name('ajax.')->group(function () {
+        Route::post('region/get-cities', [AjaxController::class, 'getCities'])->name('region.getCities');
+        Route::post('region/get-subdistricts', [AjaxController::class, 'getSubdistricts'])->name('region.getSubdistricts');
+        Route::post('region/get-urban-villages', [AjaxController::class, 'getUrbanVillages'])->name('region.getUrbanVillages');
+    });
 });

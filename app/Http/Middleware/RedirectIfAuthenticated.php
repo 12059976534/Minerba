@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Helpers\GlobalHelper;
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
@@ -23,7 +24,21 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // return redirect(RouteServiceProvider::HOME);
+                if(!Auth::user()->is_administrator)
+                {
+                    if(!Auth::user()->hasRole('personal')){
+                        if(!GlobalHelper::isVerifiedCompany()){
+                            return redirect('my-company/edit');
+                        }
+
+                        return redirect('dashboard');
+                    }
+                    
+                    return redirect('profile');
+                }
+                    
+                return redirect('admin');
             }
         }
 

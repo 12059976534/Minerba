@@ -8,79 +8,121 @@
             <div class="col-xs-12 col-md-9">
                 <div class="thumbnail">
                     <div class="caption p-lg">
-                        @if(\Auth::user()->hasRole('personal'))
-                        @else
-                            <div class="m-b-xl">
-                                <h5 class="text-muted">Bio Perusahaan</h5>
-                                <form action="{{ route('profile.edit', auth()->user()->company_id) }}" class="m-t-lg">
-                                    @csrf
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="company-name">Nama Perusahaan</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <input type="text" name="name" id="company-name" class="form-control" value="{{ $company->name }}" required>
-                                        </div>
+                        <div class="m-b-xl">
+                            <h5 class="text-muted">Bio Data</h5>
+                            <div class="m-t-lg">
+                                @if ($message = Session::get('success'))
+                                    <div class="alert alert-success mb-2">{{ $message }}</div>
+                                @endif
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="name">Full Name</label>
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="category">Kategori Perusahaan</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <input type="text" name="category" id="category" class="form-control" value="{{ $company->category }}" required>
-                                        </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ auth()->user()->name }}
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="company-email">Email Perusahaan</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <input type="email" name="email" id="company-email" class="form-control" value="{{ $company->email }}" required>
-                                        </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="address">Address</label>
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="npwp">NPWP</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <input type="text" name="npwp" id="npwp" class="form-control" value="{{ $company->npwp }}" required>
-                                        </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ $profile->address }}
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="nib">NIB</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <input type="text" name="nib" id="nib" class="form-control" value="{{ $company->nib }}" required>
-                                        </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="province">Province</label>
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="telephone">Telephone</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <input type="text" name="telephone" id="telephone" class="form-control" value="{{ $company->telephone }}" required>
-                                        </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ isset($profile->province) ? $profile->province->province_name : '' }}
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="company-address">Alamat</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <textarea name="address" id="company-address" class="form-control">{{ $company->address }}</textarea>
-                                        </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="city">City</label>
                                     </div>
-                                    <div class="row m-b">
-                                        <div class="col-xs-3" style="padding-top:10px">
-                                            <label for="description">Deskripsi Perusahaan</label>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <textarea name="description" id="description" class="form-control">{{ $company->description }}</textarea>
-                                        </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ isset($profile->city) ? $profile->city->city_name : '' }}
                                     </div>
-                                </form>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="subdistrict_id">District</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ isset($profile->subdistrict) ? $profile->subdistrict->subdistrict_name : '' }}
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="urban_village_id">Village</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ isset($profile->urbanVillage) ? $profile->urbanVillage->urban_village_name : '' }}
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="postal_code">Postal Code</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ $profile->postal_code }}
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="job_field">Job Field</label>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <table class="table">
+                                            <tbody>
+                                                @foreach ($user_job_fields as $ujf)
+                                                    <tr>
+                                                        <td>{{ $ujf->jobField->name }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="education_id">Last Education</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ isset($profile->education) ? $profile->education->name . ' - ' . $profile->major : '' }}
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="university">University</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ $profile->university }}
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ auth()->user()->email }}
+                                    </div>
+                                </div>
+                                <div class="row m-b">
+                                    <div class="col-md-3" style="padding-top:10px">
+                                        <label for="telephone">Telephone</label>
+                                    </div>
+                                    <div class="col-md-7" style="padding-top:10px">
+                                        {{ $profile->telephone }}
+                                    </div>
+                                </div>
                             </div>
-                        @endif
+                            <div class="m-t-lg">
+                                <a href="{{ route('profile.edit', $profile->unique_id) }}" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,8 @@
     <!-- Mobile viewport optimized -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="_url" content="{{ url('/') }}">
 
     <!-- Meta Tags - Description for Search Engine purposes -->
     <meta name="description" content="Cariera - Job Board HTML Template">
@@ -484,6 +486,7 @@
     <script src="{{ asset('web/js/countdown.js')}}"></script>
     <script src="{{ asset('web/js/isotope.min.js')}}"></script>
     <script src="{{ asset('web/js/custom.js')}}"></script>
+    <script src="{{ asset('assets/js/ajax.min.js')}}"></script>
     @yield('script')
 </body>
 

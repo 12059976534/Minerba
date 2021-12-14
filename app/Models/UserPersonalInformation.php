@@ -26,4 +26,30 @@ class UserPersonalInformation extends Model
         'university',
         'image'
     ];
+
+    public function education()
+    {
+        return $this->hasOne(Education::class, 'id', 'education_id');
+    }
+
+    public function province()
+    {
+        return $this->hasOne(Province::class, 'id', 'province_id');
+    }
+
+    public function city()
+    {
+        return $this->hasOne(City::class, 'id', 'city_id');
+    }
+    
+    public function subdistrict()
+    {
+        return $this->hasOne(Subdistrict::class, 'id', 'subdistrict_id');
+    }
+    
+    public function urbanVillage()
+    {
+        return $this->hasOne(UrbanVillage::class, 'id', 'urban_village_id');
+    }
+
 }

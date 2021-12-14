@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\GlobalHelper;
 use App\Http\Controllers\Controller;
+use App\Models\Company;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\UserPersonalInformation;
@@ -74,6 +76,7 @@ class RegisterController extends Controller
 
         try {
             $role = $data['type_of_user'];
+            $telephone = str_replace(' ', '', $data['telephone']);
             $user = User::create([
                 'salutation' => $data['salutation'],
                 'name' => $data['name'],
@@ -90,7 +93,7 @@ class RegisterController extends Controller
                     'subdistrict_id' => '0',
                     'urban_village_id' => '0',
                     'postal_code' => '',
-                    'telephone' => $data['telephone'],
+                    'telephone' => $telephone,
                     'user_id' => $user->id
                 ];
                 UserPersonalInformation::create($personal_information);
@@ -100,7 +103,7 @@ class RegisterController extends Controller
                     'address' => $data['company_address'],
                     'email' => $data['email'],
                     'name' => $data['company_name'],
-                    'telephone' => $data['telephone']
+                    'telephone' => $telephone
                 ];
 
                 $company = Company::create($company);

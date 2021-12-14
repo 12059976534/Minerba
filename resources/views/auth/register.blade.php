@@ -47,7 +47,7 @@
                                                         <label class="form-label" for="telephone">Telephone</label>
                                                     </div>
                                                     <div class="col-xs-8">
-                                                        <input id="telephone" type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" value="{{ old('telephone') }}" required>
+                                                        <input id="telephone" type="text" class="form-control phone-number @error('telephone') is-invalid @enderror" name="telephone" value="{{ old('telephone') }}" required>
                                                         @error('telephone')
                                                             <small class="text-danger">{{ $message }}</small>
                                                         @enderror
@@ -61,6 +61,9 @@
                                                     </div>
                                                     <div class="col-xs-8">
                                                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
+                                                        @error('email')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,7 +78,10 @@
                                                             <option value="company" {{ old('type_of_user') == 'company' ? 'selected' : '' }}>Company</option>
                                                             <option value="contractor" {{ old('type_of_user') == 'contractor' ? 'selected' : '' }}>Contractor</option>
                                                             <option value="consultant" {{ old('type_of_user') == 'consultant' ? 'selected' : '' }}>Consultant</option>
-                                                        </select>    
+                                                        </select>
+                                                        @error('type_of_user')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,6 +93,9 @@
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <input type="text" class="form-control company-name @error('company_name') is-invalid @enderror" name="company_name" value="{{ old('company_name') }}">
+                                                            @error('company_name')
+                                                                <small class="text-danger">{{ $message }}</small>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -97,6 +106,9 @@
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <textarea class="form-control company-address @error('company_address') is-invalid @enderror" name="company_address">{{ old('company_address') }}</textarea>
+                                                            @error('company_address')
+                                                                <small class="text-danger">{{ $message }}</small>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                 </div>
@@ -108,6 +120,9 @@
                                                     </div>
                                                     <div class="col-xs-8">
                                                         <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
+                                                        @error('password')
+                                                            <small class="text-danger">{{ $message }}</small>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,8 +164,15 @@
     </section>
 @endsection()
 @section('script')
+    @include('js.cleave')
     <script>
         $(function(){
+            new Cleave('.phone-number', {
+                phone: true,
+                phoneRegionCode: 'id',
+                delimiter: '',
+            });
+
             $('.type-of-user').on('change', function(){
                 var val = $(this).val();
                 if(val !== 'personal')
