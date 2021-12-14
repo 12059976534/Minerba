@@ -21,6 +21,9 @@ use App\Http\Controllers\EducationController;
 use App\Http\Controllers\web\JobFieldController;
 use App\Http\Controllers\web\MyCompanyController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CompanyControllers;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -70,6 +73,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
     Route::resource('Kategory_comodity', Kategori_Comodity_Controller::class);
     Route::resource('educations', EducationController::class);
     Route::resource('Product', ProductControllers::class);
+    Route::get('company', [CompanyControllers::class,'index'])->name('company');
+    Route::get('company/unconfirm', [CompanyControllers::class,'unconfirm'])->name('company-unconfirm');
+    Route::get('company/confirm/{id}', [CompanyControllers::class,'konfirmasi'])->name('company-confirm');
 });
 
 /* AJAX */

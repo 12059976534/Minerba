@@ -17,15 +17,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-building-4-line"></i>
-                        <span>My Company</span>
+                        <span>Company</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="email-inbox.html">Bio Perusahaan</a></li>
-                        <li><a href="email-read.html">Tenaga ahli</a></li>
-                        <li><a href="email-read.html">Bidang Kerja</a></li>
-                        <li><a href="email-read.html">Peralatan</a></li>
-                        <li><a href="email-read.html">Project</a></li>
-                        <li><a href="email-read.html">Gallery Project</a></li>
+                        <li><a href="{{ route('company')}}">Company</a></li>
                     </ul>
                 </li>
                 <li>
@@ -45,12 +40,13 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('news.index') }}">News</a></li>
                         <li><a href="{{ route('kategori.index') }}">News Kategori</a></li>
+                        <li><a href="{{ route('kategori.index') }}">News Draft</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-excavator"></i>
-                        <span>Mining Product</span>
+                        <span>Mining Komoditas</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('Product.index') }}">Product</a></li>
@@ -84,7 +80,12 @@
                     </ul>
                 </li>
 
-              
+                <li>
+                    <a href="{{ route('educations.index')}}" class="waves-effect">
+                        <i class="mdi mdi-home-variant-outline"></i>
+                        <span>educations</span>
+                    </a>
+                </li>
 
                
 

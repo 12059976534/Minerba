@@ -27,6 +27,13 @@ class NewsControllers extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function draft()
+    {
+        $data = News::join('news_categories','news_categories.id','=','news.news_category_id')->where('status',0)->get();
+        return view('news.index',compact('data'));
+    }
+
     public function create()
     {
         $kategori = kategori::all();
