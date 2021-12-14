@@ -40,6 +40,7 @@ Route::get('/conten/{slug:slug}', [NewsController::class, 'detail'])->name('cont
 Route::get('/comodity', [komoditiControllers::class, 'index'])->name('comodity');
 Route::get('/comodity/{kategori:slug}', [komoditiControllers::class, 'show'])->name('komoditas-detail');;
 Route::get('/contruktor', [App\Http\Controllers\MiningConstruktorControllers::class, 'index'])->name('contruktor');
+Route::get('/konsultan', [App\Http\Controllers\MiningConsultantControllers::class, 'index'])->name('konsultan');
 Route::get('/karir', [App\Http\Controllers\web\CarrierControllers::class, 'index'])->name('karir');
 Route::get('/karir/{id}', [App\Http\Controllers\web\CarrierControllers::class, 'show'])->name('karir-detail');
 Route::get('/tender', [App\Http\Controllers\TenderCotrollers::class, 'index'])->name('tender');

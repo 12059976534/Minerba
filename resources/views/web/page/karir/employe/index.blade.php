@@ -26,17 +26,45 @@
                             </div>
 
                             <!-- Product Description -->
-                            <div class="product-descr">
+                            <div class="col-md deskripsi" style="margin: 5%;">
+                                    <a href="">
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Paulus Lanang n </div>
+                                    </a>
+                                    <a href="">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">D3 Management Informatika</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="">
+                                                <a href="">
+                                                    <div class="tombol" style="margin-right: 12px; padding-left: 12px; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15px;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Admin site</div>
+                                                    </div>
+                                                </a>
+                                            </td>
 
-                                <a href="{{ route('karir-detail','joni') }}">
-                                    <h6>Muhammad ali</h6>
-
-                                    <!-- Price -->
-                                    <span class="price">
-                                   <p>Lombok Timur</p>
-                                    </span>
-                                </a>
-                            </div>
+                                            <td>
+                                                <a href="">
+                                                    <div class="tombol" style="margin: 1px; padding-left: 5px; padding-right: 5px; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15px;">
+                                                       <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Storeman</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <div class="tombol" style=" margin-left: 3px; padding-left: 5px;  padding-right: 5px; background-color: rgb(105, 105, 105); border-radius: 15px;">
+                                                       <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">view all</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
+                                    </a>
+                                </div>
 
                         </div>
                     </div>

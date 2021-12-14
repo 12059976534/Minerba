@@ -105,23 +105,13 @@
                             <!-- Simple Menu Item -->
                            <!-- Mega Menu Item -->
                            <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Kostraktor<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/contruktor">COAL BATUBARA</a></li>
-                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
-                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
-                                </ul>
-                            </li>
-                            <!-- End of Mega Menu Item -->
-
-                            <!-- Simple Menu Item -->
-                            <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Konsultan<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/contruktor">COAL BATUBARA</a></li>
-                                    <li><a href="find-candidate-2.html">GOLD EMAS</a></li>
-                                    <li><a href="post-job.html">NICKEL NIKEL</a></li>
-                                </ul>
+                           <a href="{{ route('contruktor') }}" >Konstraktor</a>
+                        </li>
+                        <!-- End of Mega Menu Item -->
+                        
+                        <!-- Simple Menu Item -->
+                        <li class="dropdown simple-menu">
+                                <a href="{{ route('konsultan') }}" >Konsultan</a>
                             </li>
 
                             <!-- Simple Menu Item -->

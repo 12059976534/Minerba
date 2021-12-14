@@ -13,7 +13,7 @@ class MiningConsultantControllers extends Controller
      */
     public function index()
     {
-        //
+        return view('web.page.mining konsultan.index');
     }
 
     /**
