@@ -23,7 +23,7 @@
                         <li><a href="{{ route('company')}}">Company</a></li>
                     </ul>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-database-2-line"></i>
                         <span>fitur</span>
@@ -31,7 +31,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="email-inbox.html">karir</a></li>
                     </ul>
-                </li>
+                </li> --}}
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-calendar-outline"></i>
@@ -55,7 +55,7 @@
                     </ul>
                 </li>
                 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-feature-search"></i>
                         <span>Carrier</span>
@@ -66,9 +66,9 @@
                         <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
                         <li><a href="layouts-boxed.html">Boxed Layout</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-page-layout-header"></i>
                         <span>Tender</span>
@@ -78,7 +78,7 @@
                         <li><a href="layouts-hori-topbar-dark.html">Topbar Dark</a></li>
                         <li><a href="layouts-hori-boxed-width.html">Boxed width</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="{{ route('educations.index')}}" class="waves-effect">

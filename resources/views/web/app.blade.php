@@ -121,15 +121,10 @@
                                 <a href="{{ route('karir') }}" >Karir</a>
                             </li>
 
-                            <!-- Simple Menu Item -->
-                            <li class="dropdown simple-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Tender<i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="/contruktor">JOB</a></li>
-                                    <li><a href="find-candidate-2.html">DATABASE</a></li>
-                                    <li><a href="post-job.html">PART TIME</a></li>
-                                </ul>
+                            <li class="dropdown simple-menu ">
+                                <a href="{{ route('contruktor') }}" >Tender</a>
                             </li>
+
 
                             @if(!auth()->check())
                                 <li class="menu-item btn btn-blue">
