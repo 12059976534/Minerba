@@ -17,10 +17,10 @@ class JobFieldController extends Controller
      */
     public function index()
     {
-        // if(!GlobalHelper::isVerifiedCompany())
-        // {
-        //     return redirect(route('my-company.edit'))->with('warning', 'Data perusahaan belum diverifikasi');
-        // }
+        if(!GlobalHelper::isVerifiedCompany())
+        {
+            return redirect(route('my-company.edit'))->with('warning', 'Data perusahaan belum diverifikasi');
+        }
 
         $job_fields = JobField::where('company_id', Auth::user()->company_id)->get();
         return view('web.page.job-field.index', compact('job_fields'));
@@ -33,10 +33,11 @@ class JobFieldController extends Controller
      */
     public function create()
     {
-        // if(!GlobalHelper::isVerifiedCompany())
-        // {
-        //     return redirect(route('my-company.edit'))->with('warning', 'Data perusahaan belum diverifikasi');
-        // }
+        if(!GlobalHelper::isVerifiedCompany())
+        {
+            return redirect(route('my-company.edit'))->with('warning', 'Data perusahaan belum diverifikasi');
+        }
+
         return view('web.page.job-field.create');
     }
 
@@ -48,6 +49,11 @@ class JobFieldController extends Controller
      */
     public function store(Request $request)
     {
+        if(!GlobalHelper::isVerifiedCompany())
+        {
+            return redirect(route('my-company.edit'))->with('warning', 'Data perusahaan belum diverifikasi');
+        }
+
         $input = $request->all();
         $input['company_id'] = Auth::user()->company_id;
         JobField::create($input);
@@ -109,8 +115,15 @@ class JobFieldController extends Controller
      * @param  \App\Models\JobField  $jobField
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JobField $jobField)
+    public function destroy($id)
     {
-        //
+        if(!GlobalHelper::isVerifiedCompany())
+        {
+            return redirect(route('my-company.edit'))->with('warning', 'Data perusahaan belum diverifikasi');
+        }
+
+        $job_field = JobField::where(['company_id' => Auth::user()->company_id, 'id' => $id])->firstOrFail();
+        $job_field->delete();
+        return redirect(route('job-field.index'))->with('success', 'Bidang kerja berhasil dihapus');
     }
 }

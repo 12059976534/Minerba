@@ -47,6 +47,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+    
 
     /**
      * Get a validator for an incoming registration request.
@@ -61,6 +62,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'telephone' => ['required', 'numeric', 'digits_between:5,15', 'unique:user_personal_informations', 'unique:companies'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'type_of_user' => ['required', 'in:personal,company,contractor,consultant']
         ]);
     }
 
@@ -117,5 +119,14 @@ class RegisterController extends Controller
             DB::rollBack();
             return back()->with('error', 'Terjadi kesalahan, silahkan coba lagi nanti');
         }
+    }
+
+    protected function registered(Request $request, $user)
+    {
+        if(!$user->hasRole('personal')){
+            return redirect('my-company/edit')->with('warning', 'Data perusahaan belum diverifikasi');
+        }
+        
+        return redirect('profile');
     }
 }

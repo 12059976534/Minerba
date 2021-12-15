@@ -141,7 +141,10 @@
                                 </li>
                             @else
                                 <li class="menu-item btn btn-blue">
-                                    <a href="{{ route('logout') }}" style="color:#fff" role="button" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>Logout</a>
+                                    <a href="{{ \Auth::user()->hasRole('personal') ? route('profile.index') : route('dashboard.index') }}" style="color:#fff" role="button"><i class="fa fa-user"></i> My Account</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

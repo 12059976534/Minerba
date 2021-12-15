@@ -9,19 +9,18 @@
                 <div class="thumbnail">
                     <div class="caption p-lg">
                         <div class="m-b-xl">
-                            <h5 class="text-muted">Edit Bidang Kerja</h5>
-                            <form action="{{ route('job-field.update', $job_field->id) }}" method="post" class="m-t-lg">
-                                @method('PUT')
+                            <h5 class="text-muted">Tambah Tenaga Ahli</h5>
+                            <form action="{{ route('expert.store') }}" method="post" class="m-t-lg">
                                 @csrf
                                 @if ($message = Session::get('warning'))
                                     <div class="alert alert-warning mb-2">{{ $message }}</div>
                                 @endif
-                                @include('web.page.job-field.field')
+                                @include('web.page.expert.field')
                                 <div class="row m-b">
                                     <div class="col-md-3" style="padding-top:10px"></div>
                                     <div class="col-md-7">
                                         <button class="btn btn-primary">Save</button>
-                                        <a href="{{ route('job-field.index') }}" class="btn btn-danger">Cancel</a>
+                                        <a href="{{ route('expert.index') }}" class="btn btn-danger">Cancel</a>
                                     </div>
                                 </div>
                             </form>

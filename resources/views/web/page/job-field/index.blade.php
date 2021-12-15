@@ -11,10 +11,10 @@
                         <div class="m-b-xl">
                             <h5 class="text-muted">
                                 Bidang Kerja
+                                <a href="{{ route('job-field.create') }}" class="btn btn-primary btn-sm pull-right">Tambah</a>
                             </h5>
-                            <div class="m-t m-b"><a href="{{ route('job-field.create') }}" class="btn btn-primary btn-sm">Tambah</a></div>
                             @if ($message = Session::get('success'))
-                                <div class="alert alert-success mb-2">{{ $message }}</div>
+                                <div class="alert alert-success m-t-lg m-b">{{ $message }}</div>
                             @endif
                             <div class="m-t-lg">
                                 <table class="table">
@@ -38,7 +38,11 @@
                                                 <td>{{ $jf->description }}</td>
                                                 <td>
                                                     <a href="{{ route('job-field.edit', $jf->id) }}" class="text-primary"><i class="fa fa-edit"></i></a>
-                                                    <a href="javascript:void(0)" class="text-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="javascript:void(0)" class="text-danger btn-delete"><i class="fa fa-trash"></i></a>
+                                                    <form action="{{ route('job-field.destroy', $jf->id) }}" class="form-delete" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -52,3 +56,25 @@
         </div>
     </div>
 @endsection()
+
+@section('script')
+    <script src="{{ asset('vendors/sweetalert2/sweetalert2.all.min.js') }}"></script>
+    <script>
+        $(function(){
+            $('.btn-delete').on('click', function(){
+                var t = $(this);
+                Swal.fire({
+                    title: 'Apakah anda yakin?',
+                    showCancelButton: true,
+                    confirmButtonText: 'Ya',
+                    cancelButtonText: 'Tidak',
+                    icon: 'question'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        t.closest('tr td').find('form.form-delete').submit();
+                    }
+                });
+            });
+        });
+    </script>
+@endsection

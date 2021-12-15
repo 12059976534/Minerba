@@ -18,6 +18,7 @@ use App\Http\Controllers\KategoriProductControllers;
 use App\Http\Controllers\ProductControllers;
 use App\Http\Controllers\Kategori_Comodity_Controller;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\web\ExpertController;
 use App\Http\Controllers\web\JobFieldController;
 use App\Http\Controllers\web\MyCompanyController;
 use Illuminate\Support\Facades\Auth;
@@ -52,17 +53,24 @@ Route::get('/tender', [App\Http\Controllers\TenderCotrollers::class, 'index'])->
 Route::get('/prospek', [App\Http\Controllers\ProspekController::class, 'index'])->name('prospek'); 
 Route::get('/regulasi', [App\Http\Controllers\RegulationsController::class, 'index'])->name('regulasi');
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-    Route::resource('profile', ProfileController::class)->only(['index', 'edit', 'update']);
+    /* ROLE PERSONAL */
+    Route::group(['middleware' => ['role:personal']], function() {
+        Route::resource('profile', ProfileController::class)->only(['index', 'edit', 'update']);
+    });
 
-    Route::resource('my-company', MyCompanyController::class)->only('index');
-    Route::get('my-company/edit', [MyCompanyController::class, 'edit'])->name('my-company.edit');
-    Route::put('my-company', [MyCompanyController::class, 'update'])->name('my-company.update');
+    /* ROLE COMPANY */
+    Route::group(['middleware' => ['role:company|contractor|consultant']], function() {
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+        Route::resource('my-company', MyCompanyController::class)->only('index');
+        Route::get('my-company/edit', [MyCompanyController::class, 'edit'])->name('my-company.edit');
+        Route::put('my-company', [MyCompanyController::class, 'update'])->name('my-company.update');
+        Route::resource('job-field', JobFieldController::class);
+        Route::resource('expert', ExpertController::class);
+    });
 
-    Route::resource('job-field', JobFieldController::class);
 });
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {
+Route::group(['middleware' => ['auth', 'role:administrator'], 'prefix' => 'admin'], function() {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('roles', RoleControllers::class);
     Route::resource('users', UsersControllers::class);

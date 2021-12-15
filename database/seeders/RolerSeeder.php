@@ -17,21 +17,26 @@ class RolerSeeder extends Seeder
         DB::table('roles')->insert(
             [
                 'id' => 1,
-                'name' => 'personal',
+                'name' => 'administrator',
                 'guard_name' => 'web',
             ],
             [
                 'id' => 2,
-                'name' => 'company',
+                'name' => 'personal',
                 'guard_name' => 'web',
             ],
             [
                 'id' => 3,
-                'name' => 'contractor',
+                'name' => 'company',
                 'guard_name' => 'web',
             ],
             [
                 'id' => 4,
+                'name' => 'contractor',
+                'guard_name' => 'web',
+            ],
+            [
+                'id' => 5,
                 'name' => 'consultant',
                 'guard_name' => 'web',
             ],

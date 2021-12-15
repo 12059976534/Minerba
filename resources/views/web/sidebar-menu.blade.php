@@ -14,9 +14,9 @@
                         <a href="javascript:void(0)" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">My Company</a>
                         <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
                             <li><a href="{{ route('my-company.index') }}" style="padding-left:30px">Bio Perusahaan</a></li>
-                            <li><a href="#" style="padding-left:30px">Tenaga Ahli</a></li>
+                            <li><a href="{{ route('expert.index') }}" style="padding-left:30px">Tenaga Ahli</a></li>
                             <li><a href="{{ route('job-field.index') }}" style="padding-left:30px">Bidang Kerja</a></li>
-                            <li><a href="#" style="padding-left:30px">Perlatan</a></li>
+                            <li><a href="#" style="padding-left:30px">Peralatan</a></li>
                             <li><a href="#" style="padding-left:30px">Project</a></li>
                             <li><a href="#" style="padding-left:30px">Gallery Project</a></li>
                         </ul>

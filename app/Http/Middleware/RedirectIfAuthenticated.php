@@ -38,7 +38,7 @@ class RedirectIfAuthenticated
                     return redirect('profile');
                 }
                     
-                return redirect('admin');
+                return redirect('admin/home');
             }
         }
 
