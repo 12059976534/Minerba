@@ -18,6 +18,7 @@ use App\Http\Controllers\KategoriProductControllers;
 use App\Http\Controllers\ProductControllers;
 use App\Http\Controllers\Kategori_Comodity_Controller;
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\web\ExpertController;
 use App\Http\Controllers\web\JobFieldController;
 use App\Http\Controllers\web\MyCompanyController;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::put('my-company', [MyCompanyController::class, 'update'])->name('my-company.update');
 
     Route::resource('job-field', JobFieldController::class);
+    Route::resource('expert', ExpertController::class);
 });
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function() {

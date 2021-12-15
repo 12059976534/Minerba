@@ -21,6 +21,7 @@ class CreateExpertsTable extends Migration
             $table->string('position', 100)->nullable();
             $table->longText('training')->nullable();
             $table->longText('skill')->nullable();
+            $table->string('image', 100)->nullable();
             $table->bigInteger('company_id');
             $table->timestamps();
             $table->softDeletes();
