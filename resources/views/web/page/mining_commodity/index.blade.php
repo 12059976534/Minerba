@@ -32,16 +32,16 @@
 
                                 <!-- Product Description -->
                                 <div class="col-md deskripsi" style="margin: 5%;">
-                                    <a href="{{ route('komoditas-detail',1) }}">
+                                    <a href="{{ route('komoditas-detail',$d->slug) }}">
                                         <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">{{ $d->name }}</div>
                                     </a>
-                                    <a href="{{ route('komoditas-detail',1) }}">
+                                    <a href="{{ route('komoditas-detail',$d->slug) }}">
                                         <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .{{ $d->price }}/ton</div>
                                     </a>
                                     <table>
                                         <tr >
                                             <td style="padding: 5%;">
-                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                <a href="{{ route('komoditas-detail',$d->slug) }}">
                                                     <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
                                                         <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
                                                     </div>

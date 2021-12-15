@@ -10,10 +10,13 @@ use Illuminate\Support\Facades\DB;
 class NewsController extends Controller
 {
     public function index($kategori){
+        request()->session()->put('tab',$kategori);
         if($kategori != 'all'){
-            $data = News::select('news.*','news.slug as slug2')->join('news_categories','news_categories.id','=','news.news_category_id')->where('news_categories.name',$kategori)->paginate(10);
+            $data = News::select('news.*','news.slug as slug2')->join('news_categories','news_categories.id','=','news.news_category_id')->where('news_categories.slug',$kategori)->paginate(10);
+        }else{
+            $data = News::select('news.*','news.slug as slug2')->join('news_categories','news_categories.id','=','news.news_category_id')->paginate(10);
         }
-        $data = News::select('news.*','news.slug as slug2')->join('news_categories','news_categories.id','=','news.news_category_id')->paginate(10);
+       
         return view('web.page.news.index',compact('data'));
     }
 

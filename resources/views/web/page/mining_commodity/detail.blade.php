@@ -74,7 +74,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
 
-                            <!-- Start of Product Quantity -->
+                            {{-- <!-- Start of Product Quantity -->
                             <div class="product-cart mt20">
                                 <div class="input-group product-quantity">
                                     <input type="button" value="-" class="minus">
@@ -82,7 +82,7 @@
                                     <input type="button" value="+" class="plus">
                                 </div>
                             </div>
-                            <!-- End of Product Quantity -->
+                            <!-- End of Product Quantity --> --}}
 
                             <button class="btn btn-blue btn-effect mt20">Add to Cart</button>
 
