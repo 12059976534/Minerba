@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\web;
-
+use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,8 @@ class KomoditiControllers extends Controller
      */
     public function index()
     {
-        return view('web.page.mining_commodity.index');
+        $data = Product::all();
+        return view('web.page.mining_commodity.index',compact('data'));
     }
 
     /**

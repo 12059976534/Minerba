@@ -76,6 +76,8 @@ Route::group(['middleware' => ['auth', 'role:administrator'], 'prefix' => 'admin
     Route::resource('users', UsersControllers::class);
     Route::resource('permission', PermissionControllers::class);
     Route::resource('news', NewsControllers::class);
+    Route::get('news-draft', [NewsControllers::class,'draft'])->name('news-draft');
+    Route::put('news-konfirmasi/{id}', [NewsControllers::class,'konfirmasi'])->name('news-konfirmasi');
     Route::resource('kategori', KategoriControllers::class);
     Route::resource('KategoriProduct', KategoriProductControllers::class);
     Route::resource('Kategory_comodity', Kategori_Comodity_Controller::class);

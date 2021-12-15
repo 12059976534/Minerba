@@ -40,7 +40,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('news.index') }}">News</a></li>
                         <li><a href="{{ route('kategori.index') }}">News Kategori</a></li>
-                        <li><a href="{{ route('kategori.index') }}">News Draft</a></li>
+                        <li><a href="{{ route('news-draft') }}">News Draft</a></li>
                     </ul>
                 </li>
                 <li>

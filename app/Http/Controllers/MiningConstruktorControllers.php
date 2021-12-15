@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 class MiningConstruktorControllers extends Controller
@@ -13,7 +13,8 @@ class MiningConstruktorControllers extends Controller
      */
     public function index()
     {
-        return view('web.page.mining const.index');
+        $data = Company::where('is_verified',1)->get();
+        return view('web.page.mining const.index',compact('data'));
     }
 
     /**

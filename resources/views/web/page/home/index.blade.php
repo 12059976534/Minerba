@@ -103,14 +103,14 @@
             <div class="row">
 
                 <!-- Start of Blog Posts -->
-                <div class="col-md-8 col-xs-12 blog-posts-wrapper">
-
-                    <!-- Start of Blog Post Article 1 -->
+                <div class="col-md-12 col-xs-12 blog-posts-wrapper">
+                    @foreach ($data as $d)
+                          <!-- Start of Blog Post Article 1 -->
                     <article class="col-md-12 blog-post">
 
                         <!-- Blog Post Thumbnail -->
                         <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" class="img-responsive" alt=""></a>
+                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="{{ asset('images/news/'.$d->image) }}" class="img-responsive" alt=""></a>
                             <div class="date">
                                 <span class="day">15</span>
                                 <span class="publish-month">Mar</span>
@@ -119,161 +119,24 @@
 
                         <!-- Blog Post Description -->
                         <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">top 10 tips for web developers</a></h5>
+                            <h5><a href="blog-post-right-sidebar.html">{{$d->title}}</a></h5>
                             <div class="post-detail pt10 pb20">
                                 <span><i class="fa fa-user"></i>Author</span>
                                 <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
                             </div>
 
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
+                            <p>{!! Str::limit($d->content, 250) !!}</p>
+                            <a href="{{ route('conten',$d->slug2) }}" class="btn btn-blue btn-effect mt10">read more</a>
                         </div>
                     </article>
                     <!-- End of Blog Post Article 1 -->
+                    @endforeach
+                  
 
 
-                    <!-- Start of Blog Post Article 2 -->
-                    <article class="col-md-12 blog-post">
-
-                        <!-- Blog Post Thumbnail -->
-                        <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" class="img-responsive" alt=""></a>
-                            <div class="date">
-                                <span class="day">14</span>
-                                <span class="publish-month">Mar</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post Description -->
-                        <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">how to prepare for an interview</a></h5>
-                            <div class="post-detail pt10 pb20">
-                                <span><i class="fa fa-user"></i>Author</span>
-                                <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
-                            </div>
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
-                        </div>
-                    </article>
-                    <!-- End of Blog Post Article 2 -->
-
-
-                    <!-- Start of Blog Post Article 3 -->
-                    <article class="col-md-12 blog-post">
-
-                        <!-- Blog Post Thumbnail -->
-                        <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" class="img-responsive" alt=""></a>
-                            <div class="date">
-                                <span class="day">13</span>
-                                <span class="publish-month">Mar</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post Description -->
-                        <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">freelancing vs employment</a></h5>
-                            <div class="post-detail pt10 pb20">
-                                <span><i class="fa fa-user"></i>Author</span>
-                                <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
-                            </div>
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
-                        </div>
-                    </article>
-                    <!-- End of Blog Post Article 3 -->
-
-
-                    <!-- Start of Blog Post Article 4 -->
-                    <article class="col-md-12 blog-post">
-
-                        <!-- Blog Post Thumbnail -->
-                        <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" class="img-responsive" alt=""></a>
-                            <div class="date">
-                                <span class="day">13</span>
-                                <span class="publish-month">Mar</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post Description -->
-                        <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">why should you trust cariera</a></h5>
-                            <div class="post-detail pt10 pb20">
-                                <span><i class="fa fa-user"></i>Author</span>
-                                <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
-                            </div>
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
-                        </div>
-                    </article>
-                    <!-- End of Blog Post Article 4 -->
-
-
-                    <!-- Start of Blog Post Article 5 -->
-                    <article class="col-md-12 blog-post">
-
-                        <!-- Blog Post Thumbnail -->
-                        <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" class="img-responsive" alt=""></a>
-                            <div class="date">
-                                <span class="day">12</span>
-                                <span class="publish-month">Mar</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post Description -->
-                        <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">our workflow techniques</a></h5>
-                            <div class="post-detail pt10 pb20">
-                                <span><i class="fa fa-user"></i>Author</span>
-                                <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
-                            </div>
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
-                        </div>
-                    </article>
-                    <!-- End of Blog Post Article 5 -->
-
-
-                    <!-- Start of Blog Post Article 6 -->
-                    <article class="col-md-12 blog-post">
-
-                        <!-- Blog Post Thumbnail -->
-                        <div class="col-md-4 blog-thumbnail">
-                            <a href="blog-post-right-sidebar.html" class="hover-link"><img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" class="img-responsive" alt=""></a>
-                            <div class="date">
-                                <span class="day">11</span>
-                                <span class="publish-month">Mar</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post Description -->
-                        <div class="col-md-8 blog-desc">
-                            <h5><a href="blog-post-right-sidebar.html">apperance is the key</a></h5>
-                            <div class="post-detail pt10 pb20">
-                                <span><i class="fa fa-user"></i>Author</span>
-                                <span><i class="fa fa-clock-o"></i>4:30</span>
-                                <span><i class="fa fa-comments-o"></i>12 Comments</span>
-                            </div>
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book....</p>
-                            <a href="blog-post-right-sidebar.html" class="btn btn-blue btn-effect mt10">read more</a>
-                        </div>
-                    </article>
-                    <!-- End of Blog Post Article 6 -->
 
                     <!-- Start of Pagination -->
-                    <div class="col-md-12">
+                    {{-- <div class="col-md-12">
                         <ul class="pagination list-inline text-center">
                             <li class="active"><a href="javascript:void(0)">1</a></li>
                             <li><a href="#">2</a></li>
@@ -281,163 +144,14 @@
                             <li><a href="#">4</a></li>
                             <li><a href="#">Next</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!-- End of Pagination -->
 
                 </div>
                 <!-- End of Blog Posts -->
 
 
-                <!-- Start of Blog Sidebar -->
-                <div class="col-md-4 col-xs-12 blog-sidebar">
-
-                    <!-- Start of Search -->
-                    <div class="col-md-12">
-                        <form action="#" method="get">
-                            <input type="text" class="form-control" placeholder="search...">
-                        </form>
-                    </div>
-                    <!-- End of Search -->
-
-                    <!-- Start of Popular Posts -->
-                    <div class="col-md-12 clearfix mt40">
-                        <h4 class="widget-title">popular posts</h4>
-
-                        <!-- Blog Post 1 -->
-                        <div class="sidebar-blog-post">
-                            <!-- Thumbnail -->
-                            <div class="thumbnail-post">
-                                <a href="blog-post-right-sidebar.html">
-                                    <img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <!-- Link -->
-                            <div class="post-info">
-                                <a href="blog-post-right-sidebar.html">top 10 tips for web developers</a>
-                                <span>1 day ago</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post 2 -->
-                        <div class="sidebar-blog-post">
-                            <!-- Thumbnail -->
-                            <div class="thumbnail-post">
-                                <a href="blog-post-right-sidebar.html">
-                                    <img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <!-- Link -->
-                            <div class="post-info">
-                                <a href="blog-post-right-sidebar.html">how to prepare for an interview</a>
-                                <span>2 days ago</span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Post 3 -->
-                        <div class="sidebar-blog-post">
-                            <!-- Thumbnail -->
-                            <div class="thumbnail-post">
-                                <a href="blog-post-right-sidebar.html">
-                                    <img src="https://hukumpertambangan.com/wp-content/uploads/2016/02/home-1.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <!-- Link -->
-                            <div class="post-info">
-                                <a href="blog-post-right-sidebar.html">freelance vs employment</a>
-                                <span>3 days ago</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- End of Popular Posts -->
-
-    
-                  <!-- Start of Categories -->
-                    <div class="col-md-12 mt40">
-                        <h4 class="widget-title">categories</h4>
-
-                        <ul class="sidebar-list">
-                            <li><a href="#">design</a></li>
-                            <li><a href="#">tech</a></li>
-                            <li><a href="#">strategy</a></li>
-                            <li><a href="#">job board</a></li>
-                            <li><a href="#">marketing</a></li>
-                            <li><a href="#">life</a></li>
-                            <li><a href="#">finance</a></li>
-                        </ul>
-                    </div>
-                    <!-- End of Categories -->
-
-   <!-- Start of Social Media -->
-   <div class="col-md-12 mt40">
-    <h4 class="widget-title">share</h4>
-
-    <ul class="social-btns list-inline">
-        <!-- Social Media -->
-        <li>
-            <a href="#" class="social-btn-roll facebook">
-                <div class="social-btn-roll-icons">
-                    <i class="social-btn-roll-icon fa fa-facebook"></i>
-                    <i class="social-btn-roll-icon fa fa-facebook"></i>
-                </div>
-            </a>
-        </li>
-
-        <!-- Social Media -->
-        <li>
-            <a href="#" class="social-btn-roll twitter">
-                <div class="social-btn-roll-icons">
-                    <i class="social-btn-roll-icon fa fa-twitter"></i>
-                    <i class="social-btn-roll-icon fa fa-twitter"></i>
-                </div>
-            </a>
-        </li>
-
-        <!-- Social Media -->
-        <li>
-            <a href="#" class="social-btn-roll google-plus">
-                <div class="social-btn-roll-icons">
-                    <i class="social-btn-roll-icon fa fa-google-plus"></i>
-                    <i class="social-btn-roll-icon fa fa-google-plus"></i>
-                </div>
-            </a>
-        </li>
-
-        <!-- Social Media -->
-        <li>
-            <a href="#" class="social-btn-roll instagram">
-                <div class="social-btn-roll-icons">
-                    <i class="social-btn-roll-icon fa fa-instagram"></i>
-                    <i class="social-btn-roll-icon fa fa-instagram"></i>
-                </div>
-            </a>
-        </li>
-
-        <!-- Social Media -->
-        <li>
-            <a href="#" class="social-btn-roll linkedin">
-                <div class="social-btn-roll-icons">
-                    <i class="social-btn-roll-icon fa fa-linkedin"></i>
-                    <i class="social-btn-roll-icon fa fa-linkedin"></i>
-                </div>
-            </a>
-        </li>
-
-        <!-- Social Media -->
-        <li>
-            <a href="#" class="social-btn-roll rss">
-                <div class="social-btn-roll-icons">
-                    <i class="social-btn-roll-icon fa fa-rss"></i>
-                    <i class="social-btn-roll-icon fa fa-rss"></i>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
-<!-- Start of Social Media -->
+          
 
                 </div>
                 <!-- End of Blog Sidebar -->

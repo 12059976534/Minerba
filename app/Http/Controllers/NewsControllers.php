@@ -18,7 +18,7 @@ class NewsControllers extends Controller
      */
     public function index()
     {
-        $data = News::join('news_categories','news_categories.id','=','news.news_category_id')->get();
+        $data = News::join('news_categories','news_categories.id','=','news.news_category_id')->where('status',1)->get();
         return view('news.index',compact('data'));
     }
 
@@ -31,7 +31,15 @@ class NewsControllers extends Controller
     public function draft()
     {
         $data = News::join('news_categories','news_categories.id','=','news.news_category_id')->where('status',0)->get();
-        return view('news.index',compact('data'));
+        return view('news.draft',compact('data'));
+    }
+
+    public function konfirmasi($id)
+    {
+        $data = News::find($id);
+        $update['status'] = 1;
+        $data->update($update);
+        return back()->with('success', 'Berhasil di Konfirmasi !');
     }
 
     public function create()
