@@ -31,21 +31,30 @@
                                 </div>
 
                                 <!-- Product Description -->
-                                <div class="product-descr">
-
+                                <div class="col-md deskripsi" style="margin: 5%;">
                                     <a href="{{ route('komoditas-detail',1) }}">
-                                        <h4>Batu Bara</h4>
-
-                                        <!-- Price -->
-                                        <span class="price">
-                                        <span class="amount">Rp .29000000/ton</span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="amount">Mataram - Lombok</span>
-                                        </span>
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
                                     </a>
                                 </div>
-
                             </div>
                         </div>
                         <!-- End of Product 1 -->
@@ -71,21 +80,31 @@
                                     </span>
                                 </div>
 
-                                <!-- Product Description -->
-                                <div class="product-descr">
-
-                                    <a href="{{ route('komoditas-detail',1) }}">
-                                        <h4>Batu Bara</h4>
-
-                                        <!-- Price -->
-                                        <span class="price">
-                                            <span class="amount">Rp .29000000/ton</span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="amount">Mataram - Lombok</span>
-                                        </span>
-                                    </a>
-                                </div>
+                               <!-- Product Description -->
+                               <div class="col-md deskripsi" style="margin: 5%;">
+                                <a href="{{ route('komoditas-detail',1) }}">
+                                    <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                </a>
+                                <a href="{{ route('komoditas-detail',1) }}">
+                                    <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                </a>
+                                <table>
+                                    <tr >
+                                        <td style="padding: 5%;">
+                                            <a href="{{ route('komoditas-detail',1) }}">
+                                                <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                    <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                                <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                    <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                    Jakarta Selatan
+                                </a>
+                            </div>
 
                             </div>
                         </div>
@@ -111,18 +130,28 @@
                                 </div>
 
                                 <!-- Product Description -->
-                                <div class="product-descr">
-
-                                    <a href="shop-product.html">
-                                        <h4>Batu Bara</h4>
-
-                                        <!-- Price -->
-                                        <span class="price">
-								            <span class="amount">Rp .29000000/ton</span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="amount">Mataram - Lombok</span>
-                                        </span>
+                                <div class="col-md deskripsi" style="margin: 5%;">
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
                                     </a>
                                 </div>
 
@@ -148,21 +177,31 @@
     
                                     </div>
     
-                                    <!-- Product Description -->
-                                    <div class="product-descr">
-    
-                                        <a href="{{ route('komoditas-detail',1) }}">
-                                            <h4>Batu Bara</h4>
-    
-                                            <!-- Price -->
-                                            <span class="price">
-                                                <span class="amount">Rp .29000000/ton</span>
-                                            </span>
-                                            <span class="price">
-                                                <span class="amount">Mataram - Lombok</span>
-                                            </span>
-                                        </a>
-                                    </div>
+                                   <!-- Product Description -->
+                                   <div class="col-md deskripsi" style="margin: 5%;">
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
+                                    </a>
+                                </div>
     
                                 </div>
                             </div>
@@ -186,19 +225,29 @@
 
                                 </div>
 
-                                <!-- Product Description -->
-                                <div class="product-descr">
-
+                                 <!-- Product Description -->
+                                 <div class="col-md deskripsi" style="margin: 5%;">
                                     <a href="{{ route('komoditas-detail',1) }}">
-                                        <h4>Batu Bara</h4>
-
-                                        <!-- Price -->
-                                        <span class="price">
-								            <span class="amount">Rp .29000000/ton</span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="amount">Mataram - Lombok</span>
-                                        </span>
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
                                     </a>
                                 </div>
 
@@ -224,21 +273,31 @@
     
                                     </div>
     
-                                    <!-- Product Description -->
-                                    <div class="product-descr">
-    
-                                        <a href="{{ route('komoditas-detail',1) }}">
-                                            <h4>Batu Bara</h4>
-    
-                                            <!-- Price -->
-                                            <span class="price">
-                                                <span class="amount">Rp .29000000/ton</span>
-                                            </span>
-                                            <span class="price">
-                                                <span class="amount">Mataram - Lombok</span>
-                                            </span>
-                                        </a>
-                                    </div>
+                                     <!-- Product Description -->
+                                <div class="col-md deskripsi" style="margin: 5%;">
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
+                                    </a>
+                                </div>
     
                                 </div>
                             </div>
@@ -263,18 +322,28 @@
                                 </div>
 
                                 <!-- Product Description -->
-                                <div class="product-descr">
-
+                                <div class="col-md deskripsi" style="margin: 5%;">
                                     <a href="{{ route('komoditas-detail',1) }}">
-                                        <h4>Batu Bara</h4>
-
-                                        <!-- Price -->
-                                        <span class="price">
-								            <span class="amount">Rp .29000000/ton</span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="amount">Mataram - Lombok</span>
-                                        </span>
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
                                     </a>
                                 </div>
 
@@ -300,21 +369,31 @@
     
                                     </div>
     
-                                    <!-- Product Description -->
-                                    <div class="product-descr">
-    
-                                        <a href="{{ route('komoditas-detail',1) }}">
-                                            <h4>Batu Bara</h4>
-    
-                                            <!-- Price -->
-                                            <span class="price">
-                                                <span class="amount">Rp .29000000/ton</span>
-                                            </span>
-                                            <span class="price">
-                                                <span class="amount">Mataram - Lombok</span>
-                                            </span>
-                                        </a>
-                                    </div>
+                                     <!-- Product Description -->
+                                <div class="col-md deskripsi" style="margin: 5%;">
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
+                                    </a>
+                                </div>
     
                                 </div>
                             </div>
@@ -339,18 +418,28 @@
                                 </div>
 
                                 <!-- Product Description -->
-                                <div class="product-descr">
-
+                                <div class="col-md deskripsi" style="margin: 5%;">
                                     <a href="{{ route('komoditas-detail',1) }}">
-                                        <h4>Batu Bara</h4>
-
-                                        <!-- Price -->
-                                        <span class="price">
-								            <span class="amount">Rp .29000000/ton</span>
-                                        </span>
-                                        <span class="price">
-                                            <span class="amount">Mataram - Lombok</span>
-                                        </span>
+                                        <div class="name text-dark" style="color: rgb(110, 110, 110); font-weight: bold; font-size: large;">Batu Bara</div>
+                                    </a>
+                                    <a href="{{ route('komoditas-detail',1) }}">
+                                        <div class="type" style="color: rgb(110, 110, 110); font-weight: bold;">Rp .29000000/ton</div>
+                                    </a>
+                                    <table>
+                                        <tr >
+                                            <td style="padding: 5%;">
+                                                <a href="{{ route('komoditas-detail',1) }}">
+                                                    <div class="tombol" style="margin-right: 12px; padding: 2%; width: 100%; background-color: rgb(105, 105, 105); border-radius: 15%;">
+                                                        <div class="tx" style="font-size: 80%; color: rgb(255, 255, 255);">Batu Bara</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <a href="{{ route('komoditas-detail',1) }}" class="row-md-2" style="color: black;" >
+                                        <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="margin-top: 10px; color: coral;"></i>
+                                        Jakarta Selatan
                                     </a>
                                 </div>
 
